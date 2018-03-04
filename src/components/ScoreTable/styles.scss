@@ -1,0 +1,25 @@
+@import '../../variables';
+
+.ScoreTable {
+  border: $border-width solid #000;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.ScoreTable-headerRow {
+  background-color: $black;
+  color: $white;
+  padding: 2rem;
+}
+
+.ScoreTable-cell {
+  padding: 0.5rem;
+}
+
+.ScoreTable-cell--nickname {
+  text-align: left;
+}
+
+.ScoreTable-cell--points {
+  text-align: right;
+}
