@@ -1,13 +1,18 @@
 @import '../../variables';
 
-$inventory-item-size: 100px;
+$inventory-item-size: 120px;
 
 .Inventory {
-
+  display: grid;
+  grid-area: Inventory;
+  grid-template-areas: "InventoryItems InventoryItemDetails";
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 2rem;
 }
 
 .Inventory-items {
   display: grid;
+  grid-area: InventoryItems;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax($inventory-item-size, min-content));
 }

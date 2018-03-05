@@ -3,6 +3,7 @@
 .ScoreTable {
   border: $border-width solid #000;
   border-collapse: collapse;
+  grid-area: ScoreTable;
   width: 100%;
 }
 
