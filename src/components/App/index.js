@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './styles.scss';
 import ScoreTable from '../ScoreTable';
 import ScoresService from '../../services/scores/mock';
+import Inventory from '../Inventory';
 
 class App extends Component {
   constructor(props) {
@@ -14,7 +15,6 @@ class App extends Component {
 
   componentDidMount() {
     ScoresService.getScores((scores) => {
-      console.log(scores);
       this.setState({ scores });
     });
   }
@@ -24,6 +24,7 @@ class App extends Component {
       <div className="App">
         <h1>TXP4</h1>
         <ScoreTable scores={this.state.scores} />
+        <Inventory/>
       </div>
     );
   }

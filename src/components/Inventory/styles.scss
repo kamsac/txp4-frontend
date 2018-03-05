@@ -1,0 +1,40 @@
+@import '../../variables';
+
+$inventory-item-size: 100px;
+
+.Inventory {
+
+}
+
+.Inventory-items {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax($inventory-item-size, min-content));
+}
+
+.Inventory-item {
+  background-color: #ccc;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: $border-width solid #000;
+  border-radius: $border-radius;
+  width: $inventory-item-size;
+  height: $inventory-item-size;
+}
+
+.Inventory-item--engine {
+  background-image: url('../../images/items/engine-item-placeholder.png');
+}
+
+.Inventory-item--transmission {
+  background-image: url('../../images/items/transmission-item-placeholder.png');
+}
+
+.Inventory-item--tire {
+  background-image: url('../../images/items/tire-item-placeholder.png');
+}
+
+.Inventory-item--empty {
+  background-color: #888;
+}
