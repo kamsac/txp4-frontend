@@ -38,3 +38,11 @@ $inventory-item-size: 100px;
 .Inventory-item--empty {
   background-color: #888;
 }
+
+.Inventory-item--selected {
+  border-color: $primary-color;
+}
+
+.Inventory-item--vendor-accent {
+  box-shadow: 10px 10px 10px 10px #f80;
+}

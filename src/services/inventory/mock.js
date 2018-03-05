@@ -1,105 +1,213 @@
 const ITEMS = [
   {
-    name: "Super tire",
+    name: "Tire",
     vendor: {
-      name: "Super Vendor",
+      name: "Super",
       color: "#8f0",
     },
     type: "tire",
     tier: 3,
-    stats: {
-      maxSpeed: 1,
-      acceleration: 1.2,
-      steering: 1.1,
-      breaking: 1.2,
-      grip: 1.5,
-      gravity: 1,
-    },
+    modifiers: [
+      {
+        name: "maxSpeed",
+        value: 1,
+      },
+      {
+        name: "acceleration",
+        value: 1.2,
+      },
+      {
+        name: "steering",
+        value: 1.1,
+      },
+      {
+        name: "breaking",
+        value: 1.2,
+      },
+      {
+        name: "grip",
+        value: 1.5,
+      },
+      {
+        name: "gravity",
+        value: 1,
+      },
+    ],
   },
   {
-    name: "Safe tire",
+    name: "Less tired",
     vendor: {
-      name: "Safe Vendor",
+      name: "Safe",
       color: "#f80",
     },
     type: "tire",
     tier: 1,
-    stats: {
-      maxSpeed: 0.4,
-      acceleration: 1,
-      steering: 1.4,
-      breaking: 2,
-      grip: 3,
-      gravity: 1,
-    },
+    modifiers: [
+      {
+        name: "maxSpeed",
+        value: 0.4,
+      },
+      {
+        name: "acceleration",
+        value: 1,
+      },
+      {
+        name: "steering",
+        value: 1.4,
+      },
+      {
+        name: "breaking",
+        value: 2,
+      },
+      {
+        name: "grip",
+        value: 3,
+      },
+      {
+        name: "gravity",
+        value: 1,
+      },
+    ],
   },
   {
-    name: "Heavy engine",
+    name: "Shit engine",
     vendor: {
-      name: "Heavy Vendor",
+      name: "Heavy",
       color: "#800",
     },
     type: "engine",
     tier: 2,
-    stats: {
-      maxSpeed: 2,
-      acceleration: 1.8,
-      steering: 1,
-      breaking: 1,
-      grip: 0.2,
-      gravity: 1.5,
-    },
+    modifiers: [
+      {
+        name: "maxSpeed",
+        value: 2,
+      },
+      {
+        name: "acceleration",
+        value: 1.8,
+      },
+      {
+        name: "steering",
+        value: 1,
+      },
+      {
+        name: "breaking",
+        value: 1,
+      },
+      {
+        name: "grip",
+        value: 0.2,
+      },
+      {
+        name: "gravity",
+        value: 1.5,
+      },
+    ],
   },
   {
-    name: "Light tire",
+    name: "Some tire",
     vendor: {
-      name: "Light Vendor",
+      name: "Light",
       color: "#08f",
     },
     type: "tire",
     tier: 2,
-    stats: {
-      maxSpeed: 1,
-      acceleration: 1,
-      steering: 1,
-      breaking: 1.1,
-      grip: 0.8,
-      gravity: 0.9,
-    },
+    modifiers: [
+      {
+        name: "maxSpeed",
+        value: 1,
+      },
+      {
+        name: "acceleration",
+        value: 1,
+      },
+      {
+        name: "steering",
+        value: 1,
+      },
+      {
+        name: "breaking",
+        value: 1.1,
+      },
+      {
+        name: "grip",
+        value: 0.8,
+      },
+      {
+        name: "gravity",
+        value: 0.9,
+      },
+    ],
   },
   {
-    name: "Super tire",
+    name: "Tire",
     vendor: {
-      name: "Super Vendor",
+      name: "Super",
       color: "#8f0",
     },
     type: "tire",
     tier: 3,
-    stats: {
-      maxSpeed: 1,
-      acceleration: 1.2,
-      steering: 1.1,
-      breaking: 1.2,
-      grip: 1.5,
-      gravity: 1,
-    },
+    modifiers: [
+      {
+        name: "maxSpeed",
+        value: 1,
+      },
+      {
+        name: "acceleration",
+        value: 1.2,
+      },
+      {
+        name: "steering",
+        value: 1.1,
+      },
+      {
+        name: "breaking",
+        value: 1.2,
+      },
+      {
+        name: "grip",
+        value: 1.5,
+      },
+      {
+        name: "gravity",
+        value: 1,
+      },
+    ],
   },
   {
-    name: "Super Duper engine",
+    name: "Duper engine",
     vendor: {
-      name: "Super Vendor",
+      name: "Super",
       color: "#8f0",
     },
     type: "engine",
     tier: 2,
-    stats: {
-      maxSpeed: 1.5,
-      acceleration: 3,
-      steering: 1,
-      breaking: 1,
-      grip: 1,
-      gravity: 1.5,
-    },
+    modifiers: [
+      {
+        name: "maxSpeed",
+        value: 1.5,
+      },
+      {
+        name: "acceleration",
+        value: 3,
+      },
+      {
+        name: "steering",
+        value: 1,
+      },
+      {
+        name: "breaking",
+        value: 1,
+      },
+      {
+        name: "grip",
+        value: 1,
+      },
+      {
+        name: "gravity",
+        value: 1.5,
+      },
+    ],
   },
 ];
 
