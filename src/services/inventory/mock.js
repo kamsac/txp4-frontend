@@ -215,6 +215,10 @@ const InventoryService = {
   getItems(cb) {
     setTimeout(() => cb(ITEMS), 100);
   },
+
+  equipItem(item, cb) {
+    setTimeout(() => cb(item), 100);
+  }
 };
 
 export default InventoryService;

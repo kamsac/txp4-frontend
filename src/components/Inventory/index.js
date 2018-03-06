@@ -25,6 +25,16 @@ export default class Inventory extends React.Component {
     });
   }
 
+  handleEquipItem(item) {
+    const items = this.state.items
+      .filter((inventoryItem) => item !== inventoryItem);
+
+    this.setState({
+      items,
+      selectedItem: null,
+    });
+  }
+
   render() {
     const items = this.state.items.map((item, index) => {
       let className = 'Inventory-item';
@@ -51,7 +61,10 @@ export default class Inventory extends React.Component {
         <div className="Inventory-items">
           {items}
         </div>
-        <InventoryItemDetails item={this.state.selectedItem} />
+        <InventoryItemDetails
+          item={this.state.selectedItem}
+          onEquipItem={(item) => this.handleEquipItem(item)}
+        />
       </div>
     );
   }

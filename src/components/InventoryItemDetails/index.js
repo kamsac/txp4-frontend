@@ -1,9 +1,16 @@
 import React from 'react';
 import './styles.scss';
+import InventoryService from '../../services/inventory/mock';
 
 export default class InventoryItemDetails extends React.Component {
   constructor(props) {
     super(props);
+  }
+
+  handleEquipItem(item, event) {
+    InventoryService.equipItem(item, (response) => {
+      this.props.onEquipItem(item);
+    });
   }
 
   render() {
@@ -19,6 +26,8 @@ export default class InventoryItemDetails extends React.Component {
           <ul>
             {itemModifiers}
           </ul>
+
+          <button onClick={(event) => this.handleEquipItem(item, event)}>Equip this item</button>
         </div>
       );
     } else {
