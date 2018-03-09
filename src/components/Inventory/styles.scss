@@ -5,7 +5,9 @@ $inventory-item-size: 120px;
 .Inventory {
   display: grid;
   grid-area: Inventory;
-  grid-template-areas: "InventoryItems InventoryItemDetails";
+  grid-template-areas:
+    "EquippedItems ."
+    "InventoryItems InventoryItemDetails";
   grid-template-columns: 2fr 1fr;
   grid-gap: 2rem;
 }

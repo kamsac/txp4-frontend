@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles.scss';
 import InventoryService from '../../services/inventory/mock';
+import InventoryItemModifiers from '../InventoryItemModifiers';
 
 export default class InventoryItemDetails extends React.Component {
   constructor(props) {
@@ -18,14 +19,11 @@ export default class InventoryItemDetails extends React.Component {
 
     if (item) {
       const itemName = renderItemName(item);
-      const itemModifiers = renderItemModifiers(item);
 
       return (
         <div className="InventoryItemDetails">
           {itemName}
-          <ul>
-            {itemModifiers}
-          </ul>
+          <InventoryItemModifiers item={item} />
 
           <button onClick={(event) => this.handleEquipItem(item, event)}>Equip this item</button>
         </div>
@@ -50,15 +48,4 @@ function renderItemName(item) {
       <h1>{item.name} (tier {item.tier})</h1>
     );
   }
-}
-
-function renderItemModifiers(item) {
-  return item.modifiers.map((modifier) => {
-    if (modifier.value !== 1) {
-      const percent = Math.round(modifier.value * 100) + '%';
-      return (
-        <li key={modifier.name}>{`${percent} of ${modifier.name}`}</li>
-      );
-    }
-  });
 }

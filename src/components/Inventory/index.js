@@ -2,6 +2,8 @@ import React from 'react';
 import './styles.scss';
 import InventoryService from '../../services/inventory/mock';
 import InventoryItemDetails from '../InventoryItemDetails';
+import EquippedItems from '../EquippedItems';
+import InventoryItem from '../InventoryItem';
 
 export default class Inventory extends React.Component {
   constructor(props) {
@@ -25,9 +27,19 @@ export default class Inventory extends React.Component {
     });
   }
 
-  handleEquipItem(item) {
+  handleEquipItem(equippedItem) {
     const items = this.state.items
-      .filter((inventoryItem) => item !== inventoryItem);
+      .map((inventoryItem) => {
+        if (inventoryItem.type === equippedItem.type) {
+          inventoryItem.equipped = false;
+        }
+
+        if (inventoryItem === equippedItem) {
+          inventoryItem.equipped = true;
+        }
+
+        return inventoryItem;
+      });
 
     this.setState({
       items,
@@ -36,28 +48,18 @@ export default class Inventory extends React.Component {
   }
 
   render() {
-    const items = this.state.items.map((item, index) => {
-      let className = 'Inventory-item';
-      const imageClassName = `Inventory-item--${item.type}`;
-      className += ` ${imageClassName}`;
-      if (item === this.state.selectedItem) {
-        className += ' Inventory-item--selected';
-      }
-
-      let styles = {};
-      if (item.vendor) {
-        styles.boxShadow = `inset 0 -4px 0 0 ${item.vendor.color}`;
-      }
-
-      return (
-        <div className={className} style={styles} key={index}
-             onClick={(event) => this.handleInventoryItemClick(item, event)}>
-        </div>
-      );
-    });
+    const items = this.state.items
+      .filter((item) => !item.equipped)
+      .map((item) => {
+        return (
+          <InventoryItem key={item.id} item={item} selectedItem={this.state.selectedItem}
+            onSelect={(event) => this.handleInventoryItemClick(item, event)} />
+        );
+      });
 
     return (
       <div className="Inventory">
+        <EquippedItems items={this.state.items} />
         <div className="Inventory-items">
           {items}
         </div>

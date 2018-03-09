@@ -1,5 +1,6 @@
 const ITEMS = [
   {
+    id: "a1a1a1",
     name: "Tire",
     vendor: {
       name: "Super",
@@ -7,6 +8,7 @@ const ITEMS = [
     },
     type: "tire",
     tier: 3,
+    equipped: false,
     modifiers: [
       {
         name: "maxSpeed",
@@ -35,6 +37,7 @@ const ITEMS = [
     ],
   },
   {
+    id: "b2b2b2",
     name: "Less tired",
     vendor: {
       name: "Safe",
@@ -42,6 +45,7 @@ const ITEMS = [
     },
     type: "tire",
     tier: 1,
+    equipped: false,
     modifiers: [
       {
         name: "maxSpeed",
@@ -70,6 +74,7 @@ const ITEMS = [
     ],
   },
   {
+    id: "c3c3c3",
     name: "Shit engine",
     vendor: {
       name: "Heavy",
@@ -77,6 +82,7 @@ const ITEMS = [
     },
     type: "engine",
     tier: 2,
+    equipped: false,
     modifiers: [
       {
         name: "maxSpeed",
@@ -105,6 +111,7 @@ const ITEMS = [
     ],
   },
   {
+    id: "d4d4d4",
     name: "Some tire",
     vendor: {
       name: "Light",
@@ -112,6 +119,7 @@ const ITEMS = [
     },
     type: "tire",
     tier: 2,
+    equipped: false,
     modifiers: [
       {
         name: "maxSpeed",
@@ -140,6 +148,7 @@ const ITEMS = [
     ],
   },
   {
+    id: "e5e5e5",
     name: "Tire",
     vendor: {
       name: "Super",
@@ -147,6 +156,7 @@ const ITEMS = [
     },
     type: "tire",
     tier: 3,
+    equipped: false,
     modifiers: [
       {
         name: "maxSpeed",
@@ -175,6 +185,7 @@ const ITEMS = [
     ],
   },
   {
+    id: "f6f6f6",
     name: "Duper engine",
     vendor: {
       name: "Super",
@@ -182,6 +193,7 @@ const ITEMS = [
     },
     type: "engine",
     tier: 2,
+    equipped: false,
     modifiers: [
       {
         name: "maxSpeed",
@@ -217,8 +229,9 @@ const InventoryService = {
   },
 
   equipItem(item, cb) {
-    setTimeout(() => cb(item), 100);
-  }
+    item.equipped = true;
+    setTimeout(() => cb(Object.assign({}, item)), 100);
+  },
 };
 
 export default InventoryService;
