@@ -14,7 +14,7 @@ export default class ScoreTable extends React.Component {
       .map((score) => {
         return (
           <tr className="ScoreTable-row" key={score.nickname}>
-            <td className="ScoreTable-cell ScoreTable-cell--nickname">{score.nickname}</td>
+            <td className="ScoreTable-cell ScoreTable-cell--nickname">{score.player.nickname}</td>
             <td className="ScoreTable-cell ScoreTable-cell--points">{score.points}</td>
           </tr>
         );

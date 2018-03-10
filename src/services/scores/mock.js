@@ -1,42 +1,72 @@
 const SCORES = [
   {
-    nickname: 'lymak',
+    player: {
+      login: 'lymak',
+      nickname: 'lymak',
+    },
     points: 4242,
   },
   {
-    nickname: 'kibes',
+    player: {
+      login: 'kibes',
+      nickname: 'kibes',
+    },
     points: 3232,
   },
   {
-    nickname: 'tomek',
+    player: {
+      login: 'tomek',
+      nickname: 'tomek',
+    },
     points: 2416,
   },
   {
-    nickname: 'omed',
+    player: {
+      login: 'omed',
+      nickname: 'omed',
+    },
     points: 2000,
   },
   {
-    nickname: 'tar',
+    player: {
+      login: 'tar',
+      nickname: 'tar',
+    },
     points: 1960,
   },
   {
-    nickname: 'oiz',
+    player: {
+      login: 'oiz',
+      nickname: 'oiz',
+    },
     points: 680,
   },
   {
-    nickname: 'xetrow',
+    player: {
+      login: 'xetrow',
+      nickname: 'xetrow',
+    },
     points: 403,
   },
   {
-    nickname: 'ginok',
+    player: {
+      login: 'ginok',
+      nickname: 'ginok',
+    },
     points: 30,
   },
   {
-    nickname: 'llif',
+    player: {
+      login: 'llif',
+      nickname: 'llif',
+    },
     points: 20,
   },
   {
-    nickname: 'ida',
+    player: {
+      login: 'ida',
+      nickname: 'ida',
+    },
     points: 10,
   },
 ];
