@@ -15,11 +15,11 @@ export default class InventoryItem extends React.Component {
   render() {
     const item = this.props.item;
 
-    let className = 'Inventory-item';
-    const imageClassName = `Inventory-item--${item.type}`;
+    let className = 'InventoryItem';
+    const imageClassName = `InventoryItem--${item.type}`;
     className += ` ${imageClassName}`;
     if (item === this.props.selectedItem) {
-      className += ' Inventory-item--selected';
+      className += ' InventoryItem--selected';
     }
 
     let styles = {};

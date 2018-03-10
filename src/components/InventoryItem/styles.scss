@@ -1,0 +1,34 @@
+@import '../../variables';
+
+.InventoryItem {
+  background-color: #ccc;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: $border-width solid #000;
+  border-radius: $border-radius;
+}
+
+.InventoryItem--engine {
+  background-image: url('../../images/items/engine-item-placeholder.png');
+}
+
+.InventoryItem--transmission {
+  background-image: url('../../images/items/transmission-item-placeholder.png');
+}
+
+.InventoryItem--tire {
+  background-image: url('../../images/items/tire-item-placeholder.png');
+}
+
+.InventoryItem--empty {
+  background-color: #888;
+}
+
+.InventoryItem--selected {
+  border-color: $primary-color;
+}
+
+.InventoryItem--vendor-accent {
+  box-shadow: 10px 10px 10px 10px #f80;
+}
