@@ -1,0 +1,19 @@
+$positive-color: #080;
+$negative-color: #f00;
+
+.InventoryItemModifiers {
+  padding: 0;
+}
+
+.InventoryItemModifiers-modifier {
+  list-style-type: none;
+  line-height: 2rem;
+}
+
+.InventoryItemModifiers-modifier--positive {
+  color: $positive-color;
+}
+
+.InventoryItemModifiers-modifier--negative {
+  color: $negative-color;
+}

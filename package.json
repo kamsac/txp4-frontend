@@ -10,6 +10,7 @@
     "build": "webpack"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
     "normalize.css": "^8.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
