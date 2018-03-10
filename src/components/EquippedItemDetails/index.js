@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles.scss';
 import InventoryItemModifiers from '../InventoryItemModifiers';
+import InventoryItemTitle from '../InventoryItemTitle';
 
 export default class EquippedInventoryItemDetails extends React.Component {
   constructor(props) {
@@ -9,25 +10,12 @@ export default class EquippedInventoryItemDetails extends React.Component {
 
   render() {
     const item = this.props.item;
-    const itemName = renderItemName(item);
 
     return (
       <div className="EquippedInventoryItemDetails">
-        {itemName}
+        <InventoryItemTitle item={item}/>
         <InventoryItemModifiers item={item} />
       </div>
-    );
-  }
-}
-
-function renderItemName(item) {
-  if (item.vendor) {
-    return (
-      <h1><span style={{color: item.vendor.color}}>{item.vendor.name}</span> {item.name} (tier {item.tier})</h1>
-    );
-  } else {
-    return (
-      <h1>{item.name} (tier {item.tier})</h1>
     );
   }
 }

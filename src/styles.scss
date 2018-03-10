@@ -1,7 +1,9 @@
+@import 'variables';
+
 html {
   font-size: 10px;
 }
 
 body {
-  font-size: 1.6rem;
+  font-size: $font-size;
 }

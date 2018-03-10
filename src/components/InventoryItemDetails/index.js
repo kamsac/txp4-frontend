@@ -2,6 +2,7 @@ import React from 'react';
 import './styles.scss';
 import InventoryService from '../../services/inventory/mock';
 import InventoryItemModifiers from '../InventoryItemModifiers';
+import InventoryItemTitle from '../InventoryItemTitle';
 
 export default class InventoryItemDetails extends React.Component {
   constructor(props) {
@@ -18,12 +19,11 @@ export default class InventoryItemDetails extends React.Component {
     const item = this.props.item;
 
     if (item) {
-      const itemName = renderItemName(item);
 
       return (
         <div className="InventoryItemDetails">
-          {itemName}
-          <InventoryItemModifiers item={item} />
+          <InventoryItemTitle item={item}/>
+          <InventoryItemModifiers item={item}/>
 
           <button onClick={(event) => this.handleEquipItem(item, event)}>Equip this item</button>
         </div>
@@ -35,17 +35,5 @@ export default class InventoryItemDetails extends React.Component {
         </div>
       )
     }
-  }
-}
-
-function renderItemName(item) {
-  if (item.vendor) {
-    return (
-      <h1><span style={{color: item.vendor.color}}>{item.vendor.name}</span> {item.name} (tier {item.tier})</h1>
-    );
-  } else {
-    return (
-      <h1>{item.name} (tier {item.tier})</h1>
-    );
   }
 }
