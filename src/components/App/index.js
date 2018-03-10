@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './styles.scss';
 import ScoreTable from '../ScoreTable';
-import ScoresService from '../../services/scores/mock';
+import ScoresService from '../../resources/scores/mock';
 import Inventory from '../Inventory';
 
 class App extends Component {

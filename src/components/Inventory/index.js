@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles.scss';
-import InventoryService from '../../services/inventory/mock';
+import InventoryService from '../../resources/inventory/mock';
 import InventoryItemDetails from '../InventoryItemDetails';
 import EquippedItems from '../EquippedItems';
 import InventoryItem from '../InventoryItem';
