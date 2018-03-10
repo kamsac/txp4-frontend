@@ -1,6 +1,6 @@
 @import '../../variables';
 
-$inventory-item-size: 120px;
+$inventory-item-size: 100px;
 
 .Inventory {
   display: grid;
@@ -9,14 +9,15 @@ $inventory-item-size: 120px;
     "EquippedItems ."
     "InventoryItems InventoryItemDetails";
   grid-template-columns: 2fr 1fr;
-  grid-gap: 2rem;
+  grid-gap: $grid-gap-medium;
 }
 
 .Inventory-items {
   display: grid;
   grid-area: InventoryItems;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax($inventory-item-size, min-content));
+  grid-gap: $grid-gap-small;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, $inventory-item-size);
 }
 
 .Inventory-item {
@@ -26,8 +27,6 @@ $inventory-item-size: 120px;
   background-position: center;
   border: $border-width solid #000;
   border-radius: $border-radius;
-  width: $inventory-item-size;
-  height: $inventory-item-size;
 }
 
 .Inventory-item--engine {

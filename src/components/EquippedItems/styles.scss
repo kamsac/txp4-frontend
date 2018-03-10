@@ -1,3 +1,8 @@
+@import '../../variables';
+
 .EquippedItems {
+  display: grid;
   grid-area: EquippedItems;
+  grid-gap: $grid-gap-small;
+  grid-template-columns: repeat(3, 1fr);
 }

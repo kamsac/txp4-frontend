@@ -1,0 +1,11 @@
+@import '../../variables';
+
+.EquippedItem {
+  display: grid;
+  grid-gap: $grid-gap-small/2;
+  grid-template-areas:
+    "InventoryItem"
+    "EquippedInventoryItemDetails";
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr;
+}
