@@ -13,7 +13,7 @@ export default class ScoreTable extends React.Component {
       .slice(0, this.rowsLimit)
       .map((score) => {
         return (
-          <tr className="ScoreTable-row" key={score.nickname}>
+          <tr className="ScoreTable-row" key={score.player.login}>
             <td className="ScoreTable-cell ScoreTable-cell--nickname">{score.player.nickname}</td>
             <td className="ScoreTable-cell ScoreTable-cell--points">{score.points}</td>
           </tr>
