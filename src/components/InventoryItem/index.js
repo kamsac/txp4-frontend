@@ -6,12 +6,6 @@ export default class InventoryItem extends React.Component {
     super(props);
   }
 
-  handleClick(event) {
-    if (this.props.onSelect) {
-      this.props.onSelect(this.props.item);
-    }
-  }
-
   render() {
     const item = this.props.item;
 
@@ -28,7 +22,7 @@ export default class InventoryItem extends React.Component {
     }
 
     return (
-      <div onClick={(event) => this.handleClick(event)} className={className} style={styles} />
+      <div onClick={() => this.props.onSelectItem(this.props.item)} className={className} style={styles} />
     );
   }
 }

@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import './styles.scss';
-import ScoreTable from '../ScoreTable';
-import ScoresService from '../../resources/scores/mock';
-import Inventory from '../Inventory';
+import MainScoreTable from '../../containers/MainScoreTable';
+import MainInventory from '../../containers/MainInventory';
 
-class App extends Component {
+export default class App extends Component {
   constructor(props) {
     super(props);
 
@@ -13,21 +12,13 @@ class App extends Component {
     };
   }
 
-  componentDidMount() {
-    ScoresService.getScores((scores) => {
-      this.setState({ scores });
-    });
-  }
-
   render() {
     return (
       <div className="App">
         <h1>TXP4</h1>
-        <ScoreTable scores={this.state.scores} />
-        <Inventory/>
+        <MainScoreTable />
+        <MainInventory />
       </div>
     );
   }
 }
-
-export default App;
