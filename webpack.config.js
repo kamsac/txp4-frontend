@@ -63,5 +63,6 @@ module.exports = {
     contentBase: path.resolve(__dirname, 'build'),
     compress: true,
     port: 9000,
+    historyApiFallback: true,
   },
 };

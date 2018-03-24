@@ -1,14 +1,6 @@
 @import '../../variables';
 
 .App {
-  display: grid;
-  grid-gap: $grid-gap-medium;
-  grid-template-areas:
-    "AppTitle AppTitle"
-    "EquippedItems ."
-    "Inventory Inventory"
-    ". ScoreTable";
-  grid-template-columns: 2fr 1fr;
   max-width: 1000px;
   margin: 0 auto;
 }
