@@ -3,6 +3,7 @@ import './styles.scss';
 import { BrowserRouter, Route } from 'react-router-dom'
 import MainScoreTable from '../../containers/MainScoreTable';
 import MainInventory from '../../containers/MainInventory';
+import Navbar from '../Navbar';
 
 export default class App extends Component {
   constructor(props) {
@@ -13,7 +14,7 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <h1>TXP4</h1>
+          <Navbar/>
           <Route exact path="/scores" component={MainScoreTable} />
           <Route exact path="/inventory" component={MainInventory} />
         </div>

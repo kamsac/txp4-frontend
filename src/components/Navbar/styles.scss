@@ -1,0 +1,36 @@
+@import '../../variables';
+
+.Navbar {
+  align-items: center;
+  display: grid;
+  grid-gap: $grid-gap-large;
+  grid-template-areas: "AppTitle Navigation";
+  grid-template-columns: auto 1fr;
+}
+
+.AppTitle {
+  grid-area: AppTitle;
+}
+
+.Navigation {
+  display: grid;
+  grid-area: Navigation;
+  grid-auto-columns: minmax(100px, max-content);
+  grid-auto-flow: column;
+  grid-gap: $grid-gap-small;
+  padding: 0;
+  list-style-type: none;
+}
+
+.NavigationItem {
+  align-items: stretch;
+  display: grid;
+  justify-items: stretch;
+}
+
+.NavigationItem__anchor {
+  align-items: center;
+  display: grid;
+  justify-items: center;
+  text-decoration: none;
+}
