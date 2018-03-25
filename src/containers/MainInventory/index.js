@@ -5,6 +5,7 @@ import Inventory from '../../components/Inventory';
 const mapStateToProps = state => ({
   items: state.inventory.items,
   selectedItem: state.inventory.selectedItem,
+  equipRegions: ['tire', 'engine', 'transmission'],
 });
 
 const mapDispatchToProps = dispatch => ({

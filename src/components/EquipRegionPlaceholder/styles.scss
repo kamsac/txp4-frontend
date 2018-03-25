@@ -1,0 +1,33 @@
+@import '../../variables';
+
+.EquipRegionPlaceholder {
+  display: grid;
+  grid-gap: $grid-gap-small/2;
+  grid-template-areas:
+    "InventoryItem"
+    "EquippedInventoryItemDetails";
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr;
+}
+
+@import '../../variables';
+
+.EquipRegionPlaceholder__Item {
+  background-color: #ccc;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: $border-width solid #000;
+  border-radius: $border-radius;
+}
+
+.EquipRegionPlaceholder__Details {
+  border: $border-width solid $black;
+  border-radius: $border-radius;
+  grid-area: EquippedInventoryItemDetails;
+}
+
+.EquipRegionPlaceholder__Title {
+  font-size: $font-size-header;
+}
+

@@ -6,9 +6,9 @@ const ITEMS = [
       name: "Super",
       color: "#8f0",
     },
-    type: "tire",
+    equipRegion: "tire",
     tier: 3,
-    equipped: true,
+    isEquipped: true,
     modifiers: [
       {
         name: "maxSpeed",
@@ -43,9 +43,9 @@ const ITEMS = [
       name: "Safe",
       color: "#f80",
     },
-    type: "tire",
+    equipRegion: "tire",
     tier: 1,
-    equipped: false,
+    isEquipped: false,
     modifiers: [
       {
         name: "maxSpeed",
@@ -80,9 +80,9 @@ const ITEMS = [
       name: "Heavy",
       color: "#800",
     },
-    type: "engine",
+    equipRegion: "engine",
     tier: 2,
-    equipped: true,
+    isEquipped: false,
     modifiers: [
       {
         name: "maxSpeed",
@@ -117,9 +117,9 @@ const ITEMS = [
       name: "Light",
       color: "#08f",
     },
-    type: "tire",
+    equipRegion: "tire",
     tier: 2,
-    equipped: false,
+    isEquipped: false,
     modifiers: [
       {
         name: "maxSpeed",
@@ -154,9 +154,9 @@ const ITEMS = [
       name: "Super",
       color: "#8f0",
     },
-    type: "tire",
+    equipRegion: "tire",
     tier: 3,
-    equipped: false,
+    isEquipped: false,
     modifiers: [
       {
         name: "maxSpeed",
@@ -191,9 +191,9 @@ const ITEMS = [
       name: "Super",
       color: "#8f0",
     },
-    type: "engine",
+    equipRegion: "engine",
     tier: 2,
-    equipped: false,
+    isEquipped: false,
     modifiers: [
       {
         name: "maxSpeed",
@@ -228,9 +228,9 @@ const ITEMS = [
       name: "Super",
       color: "#8f0",
     },
-    type: "tire",
+    equipRegion: "tire",
     tier: 3,
-    equipped: false,
+    isEquipped: false,
     modifiers: [
       {
         name: "maxSpeed",
@@ -265,9 +265,9 @@ const ITEMS = [
       name: "Safe",
       color: "#f80",
     },
-    type: "tire",
+    equipRegion: "tire",
     tier: 1,
-    equipped: false,
+    isEquipped: false,
     modifiers: [
       {
         name: "maxSpeed",
@@ -302,9 +302,9 @@ const ITEMS = [
       name: "Heavy",
       color: "#800",
     },
-    type: "engine",
+    equipRegion: "engine",
     tier: 2,
-    equipped: false,
+    isEquipped: false,
     modifiers: [
       {
         name: "maxSpeed",
@@ -339,9 +339,9 @@ const ITEMS = [
       name: "Light",
       color: "#08f",
     },
-    type: "tire",
+    equipRegion: "tire",
     tier: 2,
-    equipped: false,
+    isEquipped: false,
     modifiers: [
       {
         name: "maxSpeed",
@@ -371,34 +371,34 @@ const ITEMS = [
   },
   {
     id: "j1j1j1",
-    name: "Tire",
+    name: "Transmission",
     vendor: {
-      name: "Super",
-      color: "#8f0",
+      name: "Heavy",
+      color: "#800",
     },
-    type: "tire",
+    equipRegion: "transmission",
     tier: 3,
-    equipped: false,
+    isEquipped: false,
     modifiers: [
       {
         name: "maxSpeed",
-        value: 1,
+        value: 0.7,
       },
       {
         name: "acceleration",
-        value: 1.2,
+        value: 1.5,
       },
       {
         name: "steering",
-        value: 1.1,
+        value: 1,
       },
       {
         name: "breaking",
-        value: 1.2,
+        value: 1,
       },
       {
         name: "grip",
-        value: 1.5,
+        value: 1,
       },
       {
         name: "gravity",
@@ -414,8 +414,7 @@ const InventoryService = {
   },
 
   equipItem(item, cb) {
-    item.equipped = true;
-    setTimeout(() => cb(Object.assign({}, item)), 100);
+    setTimeout(() => cb(ITEMS), 100);
   },
 };
 

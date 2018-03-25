@@ -20,12 +20,12 @@ export function inventoryReducer(state = initialValue, action) {
     case EQUIP_ITEM:
       const interpolatedItems = [...state.items]
         .map((inventoryItem) => {
-          if (inventoryItem.type === action.item.type) {
-            inventoryItem.equipped = false;
+          if (inventoryItem.equipRegion === action.item.equipRegion) {
+            inventoryItem.isEquipped = false;
           }
 
           if (inventoryItem === action.item) {
-            inventoryItem.equipped = true;
+            inventoryItem.isEquipped = true;
           }
 
           return inventoryItem;

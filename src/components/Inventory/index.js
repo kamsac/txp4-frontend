@@ -15,7 +15,7 @@ export default class Inventory extends React.Component {
 
   render() {
     const items = this.props.items
-      .filter((item) => !item.equipped)
+      .filter((item) => !item.isEquipped)
       .map((item) => {
         return (
           <InventoryItem
@@ -29,7 +29,7 @@ export default class Inventory extends React.Component {
 
     return (
       <div className="Inventory">
-        <EquippedItems items={this.props.items}/>
+        <EquippedItems items={this.props.items} equipRegions={this.props.equipRegions}/>
         <div className="Inventory-items">
           {items}
         </div>
