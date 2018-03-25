@@ -15,8 +15,10 @@ export default class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Navbar/>
-          <Route exact path="/scores" component={MainScoreTable} />
-          <Route exact path="/inventory" component={MainInventory} />
+          <div className="PageContent">
+            <Route exact path="/scores" component={MainScoreTable} />
+            <Route exact path="/inventory" component={MainInventory} />
+          </div>
         </div>
       </BrowserRouter>
     );
