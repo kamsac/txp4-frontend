@@ -30,7 +30,7 @@ export default class Inventory extends React.Component {
     return (
       <div className="Inventory">
         <EquippedItems items={this.props.items} equipRegions={this.props.equipRegions}/>
-        <div className="Inventory-items">
+        <div className="InventoryItems">
           {items}
         </div>
         <InventoryItemDetails
