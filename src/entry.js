@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App/index';
+import HotApp from './containers/HotApp';
 import 'normalize.css';
 import './styles.scss';
 import { createStore, applyMiddleware } from 'redux';
@@ -20,7 +20,7 @@ const store = createStore(
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <HotApp />
   </Provider>,
   document.getElementById('root')
 );

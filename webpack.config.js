@@ -1,11 +1,17 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/entry.js',
+  entry: [
+    'react-hot-loader/patch',
+    'webpack-dev-server/client?http://localhost:9000',
+    'webpack/hot/only-dev-server',
+    './src/entry.js',
+  ],
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'app.js',
+    filename: 'app.js'
   },
   module: {
     rules: [
@@ -53,16 +59,19 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin(),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
     }),
   ],
   resolve: {},
-  devtool: 'inline-source-map',
+  devtool: 'cheap-eval-source-map',
   devServer: {
     contentBase: path.resolve(__dirname, 'build'),
     compress: true,
     port: 9000,
     historyApiFallback: true,
+    hot: true,
   },
 };
