@@ -71,10 +71,10 @@ export const SCORES = [
   },
 ];
 
-const ScoresService = {
+const ScoresResource = {
   getScores(cb) {
     setTimeout(() => cb(SCORES), 100);
   },
 };
 
-export default ScoresService;
+export default ScoresResource;

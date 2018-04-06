@@ -375,7 +375,7 @@ const ITEMS = [
   },
 ];
 
-const InventoryService = {
+const InventoryResource = {
   getItems(cb) {
     setTimeout(() => cb(ITEMS), 100);
   },
@@ -385,4 +385,4 @@ const InventoryService = {
   },
 };
 
-export default InventoryService;
+export default InventoryResource;

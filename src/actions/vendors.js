@@ -1,4 +1,4 @@
-import VendorsService from '../resources/vendors/mock';
+import VendorsResources from '../resources/vendors/mock';
 
 export const REQUEST_VENDORS = 'vendors:requestVendors';
 export function requestVendors() {
@@ -9,7 +9,7 @@ export function requestVendors() {
 
 function fetchVendors() {
   return dispatch => {
-    VendorsService.getVendors((vendors) => {
+    VendorsResources.getVendors((vendors) => {
       dispatch(receiveVendors(vendors));
     });
   }

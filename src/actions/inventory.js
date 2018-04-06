@@ -1,4 +1,4 @@
-import InventoryService from '../resources/inventory/mock';
+import InventoryResource from '../resources/inventory/mock';
 
 export const REQUEST_ITEMS = 'inventory:requestItems';
 export function requestItems() {
@@ -9,7 +9,7 @@ export function requestItems() {
 
 function fetchItems() {
   return dispatch => {
-    InventoryService.getItems((items) => {
+    InventoryResource.getItems((items) => {
       dispatch(receiveItems(items));
     });
   }

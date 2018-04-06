@@ -1,4 +1,4 @@
-import ScoresService from '../resources/scores/mock';
+import ScoresResource from '../resources/scores/mock';
 
 export const REQUEST_SCORES = 'scores:requestScores';
 export function requestScores() {
@@ -9,7 +9,7 @@ export function requestScores() {
 
 function fetchScores() {
   return dispatch => {
-    ScoresService.getScores((scores) => {
+    ScoresResource.getScores((scores) => {
       dispatch(receiveScores(scores));
     });
   }
