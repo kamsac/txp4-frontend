@@ -21,10 +21,10 @@ const VENDORS = [
   },
 ];
 
-const VendorsResources = {
+const VendorsResource = {
   getVendors(cb) {
     setTimeout(() => cb(VENDORS), 100);
   },
 };
 
-export default VendorsResources;
+export default VendorsResource;
