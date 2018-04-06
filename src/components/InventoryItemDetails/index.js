@@ -14,7 +14,7 @@ export default class InventoryItemDetails extends React.Component {
     if (item) {
       return (
         <div className="InventoryItemDetails">
-          <InventoryItemTitle item={item}/>
+          <InventoryItemTitle item={item} vendors={this.props.vendors}/>
           <InventoryItemModifiers item={item}/>
 
           <button onClick={() => this.props.onEquipItem(item)}>Equip this item</button>

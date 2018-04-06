@@ -1,7 +1,7 @@
 import InventoryService from '../resources/inventory/mock';
 
 export const REQUEST_ITEMS = 'inventory:requestItems';
-export function updateItems() {
+export function requestItems() {
   return dispatch => {
     dispatch(fetchItems());
   }

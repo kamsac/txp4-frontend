@@ -8,24 +8,19 @@ export default class InventoryItemTitle extends React.Component {
 
   render() {
     const item = this.props.item;
-    const itemName = renderItemName(item);
+    const vendor = this.props.vendors.find(vendor => vendor.id === this.props.item.vendorId);
 
     return (
       <div className="InventoryItemTitle">
-        {itemName}
+        {
+          vendor ?
+            <h1 className="InventoryItemTitle-header">
+              <span style={{color: vendor.color}}>{vendor.name}</span> {item.name} (tier {item.tier})
+            </h1>
+            :
+            <h1 className="InventoryItemTitle-header">{item.name} (tier {item.tier})</h1>
+        }
       </div>
-    );
-  }
-}
-
-function renderItemName(item) {
-  if (item.vendor) {
-    return (
-      <h1 className="InventoryItemTitle-header"><span style={{color: item.vendor.color}}>{item.vendor.name}</span> {item.name} (tier {item.tier})</h1>
-    );
-  } else {
-    return (
-      <h1 className="InventoryItemTitle-header">{item.name} (tier {item.tier})</h1>
     );
   }
 }

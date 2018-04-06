@@ -13,7 +13,7 @@ export default class EquippedItems extends React.Component {
       .map((equipRegion) => {
         const equippedItem = getEquippedItemByEquipRegion(this.props.items, equipRegion);
         return equippedItem ?
-          <EquipRegion key={equippedItem.id} item={equippedItem} />
+          <EquipRegion key={equippedItem.id} item={equippedItem} vendors={this.props.vendors}/>
           :
           <EquipRegionPlaceholder key={equipRegion} equipRegion={equipRegion} />
       });

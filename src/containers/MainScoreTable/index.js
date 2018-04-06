@@ -9,7 +9,7 @@ class MainScoreTable extends React.Component{
   }
 
   componentDidMount() {
-    this.props.dispatch(requestScores());
+    this.props.requestScores();
   }
 
   render() {
@@ -23,6 +23,11 @@ const mapStateToProps = state => ({
   scores: state.scores,
 });
 
+const mapDispatchToProps = dispatch => ({
+  requestScores: () => dispatch(requestScores()),
+});
+
 export default connect(
   mapStateToProps,
+  mapDispatchToProps,
 )(MainScoreTable);

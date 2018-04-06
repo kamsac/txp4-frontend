@@ -11,8 +11,8 @@ export default class EquipRegion extends React.Component {
   render() {
     return (
       <div className="EquipRegion">
-        <InventoryItem item={this.props.item} />
-        <EquippedInventoryItemDetails item={this.props.item} />
+        <InventoryItem item={this.props.item} vendors={this.props.vendors} />
+        <EquippedInventoryItemDetails item={this.props.item} vendors={this.props.vendors} />
       </div>
     )
   }

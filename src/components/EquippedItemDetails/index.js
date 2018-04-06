@@ -13,8 +13,8 @@ export default class EquippedInventoryItemDetails extends React.Component {
 
     return (
       <div className="EquippedInventoryItemDetails">
-        <InventoryItemTitle item={item}/>
-        <InventoryItemModifiers item={item} />
+        <InventoryItemTitle item={item} vendors={this.props.vendors}/>
+        <InventoryItemModifiers item={item}/>
       </div>
     );
   }

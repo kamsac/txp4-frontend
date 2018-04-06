@@ -8,6 +8,7 @@ export default class InventoryItem extends React.Component {
 
   render() {
     const item = this.props.item;
+    const vendor = this.props.vendors.find(vendor => vendor.id === this.props.item.vendorId);
 
     let className = 'InventoryItem';
     const imageClassName = `InventoryItem--${item.equipRegion}`;
@@ -17,8 +18,8 @@ export default class InventoryItem extends React.Component {
     }
 
     let styles = {};
-    if (item.vendor) {
-      styles.boxShadow = `inset 0 -4px 0 0 ${item.vendor.color}`;
+    if (vendor) {
+      styles.boxShadow = `inset 0 -4px 0 0 ${vendor.color}`;
     }
 
     return (

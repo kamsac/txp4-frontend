@@ -2,10 +2,7 @@ const ITEMS = [
   {
     id: "a1a1a1",
     name: "Tire",
-    vendor: {
-      name: "Super",
-      color: "#8f0",
-    },
+    vendorId: 'aaa',
     equipRegion: "tire",
     tier: 3,
     isEquipped: true,
@@ -39,10 +36,7 @@ const ITEMS = [
   {
     id: "b2b2b2",
     name: "Less tired",
-    vendor: {
-      name: "Safe",
-      color: "#f80",
-    },
+    vendorId: 'bbb',
     equipRegion: "tire",
     tier: 1,
     isEquipped: false,
@@ -76,10 +70,7 @@ const ITEMS = [
   {
     id: "c3c3c3",
     name: "Shit engine",
-    vendor: {
-      name: "Heavy",
-      color: "#800",
-    },
+    vendorId: 'ccc',
     equipRegion: "engine",
     tier: 2,
     isEquipped: false,
@@ -113,10 +104,7 @@ const ITEMS = [
   {
     id: "d4d4d4",
     name: "Some tire",
-    vendor: {
-      name: "Light",
-      color: "#08f",
-    },
+    vendorId: 'ddd',
     equipRegion: "tire",
     tier: 2,
     isEquipped: false,
@@ -150,10 +138,7 @@ const ITEMS = [
   {
     id: "e5e5e5",
     name: "Tire",
-    vendor: {
-      name: "Super",
-      color: "#8f0",
-    },
+    vendorId: 'aaa',
     equipRegion: "tire",
     tier: 3,
     isEquipped: false,
@@ -187,10 +172,7 @@ const ITEMS = [
   {
     id: "f6f6f6",
     name: "Duper engine",
-    vendor: {
-      name: "Super",
-      color: "#8f0",
-    },
+    vendorId: 'aaa',
     equipRegion: "engine",
     tier: 2,
     isEquipped: false,
@@ -224,10 +206,7 @@ const ITEMS = [
   {
     id: "f7f7f7",
     name: "Tire",
-    vendor: {
-      name: "Super",
-      color: "#8f0",
-    },
+    vendorId: 'aaa',
     equipRegion: "tire",
     tier: 3,
     isEquipped: false,
@@ -261,10 +240,7 @@ const ITEMS = [
   {
     id: "g8g8g8",
     name: "Less tired",
-    vendor: {
-      name: "Safe",
-      color: "#f80",
-    },
+    vendorId: 'bbb',
     equipRegion: "tire",
     tier: 1,
     isEquipped: false,
@@ -298,10 +274,7 @@ const ITEMS = [
   {
     id: "h9h9h9",
     name: "Shit engine",
-    vendor: {
-      name: "Heavy",
-      color: "#800",
-    },
+    vendorId: 'ccc',
     equipRegion: "engine",
     tier: 2,
     isEquipped: false,
@@ -335,10 +308,7 @@ const ITEMS = [
   {
     id: "i0i0i0",
     name: "Some tire",
-    vendor: {
-      name: "Light",
-      color: "#08f",
-    },
+    vendorId: 'ddd',
     equipRegion: "tire",
     tier: 2,
     isEquipped: false,
@@ -372,10 +342,7 @@ const ITEMS = [
   {
     id: "j1j1j1",
     name: "Transmission",
-    vendor: {
-      name: "Heavy",
-      color: "#800",
-    },
+    vendorId: 'ccc',
     equipRegion: "transmission",
     tier: 3,
     isEquipped: false,

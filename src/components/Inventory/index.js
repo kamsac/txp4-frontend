@@ -10,7 +10,8 @@ export default class Inventory extends React.Component {
   }
 
   componentDidMount() {
-    this.props.updateItems();
+    this.props.requestItems();
+    this.props.requestVendors();
   }
 
   render() {
@@ -23,19 +24,25 @@ export default class Inventory extends React.Component {
             item={item}
             selectedItem={this.props.selectedItem}
             onSelectItem={this.props.onSelectItem}
+            vendors={this.props.vendors}
           />
         );
       });
 
     return (
       <div className="Inventory">
-        <EquippedItems items={this.props.items} equipRegions={this.props.equipRegions}/>
+        <EquippedItems
+          items={this.props.items}
+          equipRegions={this.props.equipRegions}
+          vendors={this.props.vendors}
+        />
         <div className="InventoryItems">
           {items}
         </div>
         <InventoryItemDetails
           item={this.props.selectedItem}
           onEquipItem={this.props.onEquipItem}
+          vendors={this.props.vendors}
         />
       </div>
     );
