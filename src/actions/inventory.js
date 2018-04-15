@@ -19,7 +19,7 @@ export const RECEIVE_ITEMS = 'inventory:receiveItems';
 export function receiveItems(items) {
   return {
     type: RECEIVE_ITEMS,
-    items
+    payload: { items }
   }
 }
 
@@ -27,7 +27,7 @@ export const SELECT_ITEM = 'inventory:selectItem';
 export function selectItem(selectedItem) {
   return {
     type: SELECT_ITEM,
-    selectedItem
+    payload: { selectedItem }
   }
 }
 
@@ -35,6 +35,6 @@ export const EQUIP_ITEM = 'inventory:equipItem';
 export function equipItem(item) {
   return {
     type: EQUIP_ITEM,
-    item
+    payload: { item }
   }
 }

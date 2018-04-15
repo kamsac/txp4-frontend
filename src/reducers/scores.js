@@ -5,7 +5,7 @@ const initialValue = [];
 export function scoresReducer(state = initialValue, action) {
   switch(action.type) {
     case RECEIVE_SCORES:
-      return [...action.scores];
+      return [...action.payload.scores];
     default:
       return state;
   }

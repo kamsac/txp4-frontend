@@ -19,6 +19,6 @@ export const RECEIVE_SCORES = 'scores:fetchScoresSuccess';
 export function receiveScores(scores) {
   return {
     type: RECEIVE_SCORES,
-    scores: scores,
+    payload: { scores },
   }
 }

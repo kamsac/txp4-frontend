@@ -19,6 +19,6 @@ export const RECEIVE_VENDORS = 'vendors:fetchVendorsSuccess';
 export function receiveVendors(vendors) {
   return {
     type: RECEIVE_VENDORS,
-    vendors: vendors,
+    payload: { vendors },
   }
 }
