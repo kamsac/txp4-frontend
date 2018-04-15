@@ -24,7 +24,7 @@ export function inventoryReducer(state = initialValue, action) {
             inventoryItem.isEquipped = false;
           }
 
-          if (inventoryItem === action.payload.item) {
+          if (inventoryItem.id === action.payload.item.id) {
             inventoryItem.isEquipped = true;
           }
 
@@ -32,7 +32,7 @@ export function inventoryReducer(state = initialValue, action) {
         });
 
       return Object.assign({}, state, {
-        items: interpolatedItems
+        items: interpolatedItems,
       });
     default:
       return state;
