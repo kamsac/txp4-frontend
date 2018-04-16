@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`receiveVendors 1`] = `
+Object {
+  "payload": Object {
+    "vendors": Array [
+      Object {
+        "color": "#8f0",
+        "id": "aaa",
+        "name": "Super",
+      },
+      Object {
+        "color": "#f80",
+        "id": "bbb",
+        "name": "Safe",
+      },
+      Object {
+        "color": "#800",
+        "id": "ccc",
+        "name": "Heavy",
+      },
+      Object {
+        "color": "#08f",
+        "id": "ddd",
+        "name": "Light",
+      },
+    ],
+  },
+  "type": "vendors:fetchVendorsSuccess",
+}
+`;

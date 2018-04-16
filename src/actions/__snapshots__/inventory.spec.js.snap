@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`equipItem 1`] = `
+Object {
+  "payload": Object {
+    "item": Object {
+      "equipRegion": "tire",
+      "id": "e5e5e5",
+      "isEquipped": false,
+      "modifiers": Array [
+        Object {
+          "name": "maxSpeed",
+          "value": 1,
+        },
+      ],
+      "name": "Tire",
+      "tier": 3,
+      "vendorId": "aaa",
+    },
+  },
+  "type": "inventory:equipItem",
+}
+`;
+
+exports[`receiveItems 1`] = `
+Object {
+  "payload": Object {
+    "items": undefined,
+  },
+  "type": "inventory:receiveItems",
+}
+`;
+
+exports[`selectItem 1`] = `
+Object {
+  "payload": Object {
+    "selectedItem": Object {
+      "equipRegion": "tire",
+      "id": "e5e5e5",
+      "isEquipped": false,
+      "modifiers": Array [
+        Object {
+          "name": "maxSpeed",
+          "value": 1,
+        },
+      ],
+      "name": "Tire",
+      "tier": 3,
+      "vendorId": "aaa",
+    },
+  },
+  "type": "inventory:selectItem",
+}
+`;

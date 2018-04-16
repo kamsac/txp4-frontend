@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`receiveScores 1`] = `
+Object {
+  "payload": Object {
+    "scores": Array [
+      Object {
+        "player": Object {
+          "login": "lymak",
+          "nickname": "lymak",
+        },
+        "points": 4242,
+      },
+      Object {
+        "player": Object {
+          "login": "kibes",
+          "nickname": "kibes",
+        },
+        "points": 3232,
+      },
+      Object {
+        "player": Object {
+          "login": "tomek",
+          "nickname": "tomek",
+        },
+        "points": 2416,
+      },
+    ],
+  },
+  "type": "scores:fetchScoresSuccess",
+}
+`;
