@@ -25,7 +25,36 @@ Object {
 exports[`receiveItems 1`] = `
 Object {
   "payload": Object {
-    "items": undefined,
+    "items": Array [
+      Object {
+        "equipRegion": "tire",
+        "id": "a1a1a1",
+        "isEquipped": true,
+        "modifiers": Array [
+          Object {
+            "name": "acceleration",
+            "value": 1.2,
+          },
+        ],
+        "name": "Tire",
+        "tier": 3,
+        "vendorId": "aaa",
+      },
+      Object {
+        "equipRegion": "tire",
+        "id": "b2b2b2",
+        "isEquipped": false,
+        "modifiers": Array [
+          Object {
+            "name": "maxSpeed",
+            "value": 0.4,
+          },
+        ],
+        "name": "Less tired",
+        "tier": 1,
+        "vendorId": "bbb",
+      },
+    ],
   },
   "type": "inventory:receiveItems",
 }

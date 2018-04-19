@@ -32,7 +32,7 @@ test('receiveItems', () => {
     },
   ];
 
-  expect(receiveItems()).toMatchSnapshot();
+  expect(receiveItems(someItems)).toMatchSnapshot();
 });
 
 test('selectItem', () => {
