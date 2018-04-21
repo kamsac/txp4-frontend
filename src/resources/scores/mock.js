@@ -1,4 +1,4 @@
-export const SCORES = [
+const SCORES = [
   {
     player: {
       login: 'lymak',
@@ -71,10 +71,15 @@ export const SCORES = [
   },
 ];
 
-const ScoresResource = {
-  getScores(cb) {
-    setTimeout(() => cb(SCORES), 100);
+const ScoresResourceMock = {
+  getScores() {
+    return new Promise((resolve, reject) => {
+      const response = {
+        data: SCORES,
+      };
+      setTimeout(() => resolve(response), 100);
+    });
   },
 };
 
-export default ScoresResource;
+export default ScoresResourceMock;

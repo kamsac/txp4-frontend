@@ -1,4 +1,6 @@
-import VendorsResource from '../resources/vendors/mock';
+import dotenvConfiguration from '../dotenv-configuration';
+import VendorsResourceMock from '../resources/vendors/mock';
+import VendorsResource from '../resources/vendors';
 
 export const REQUEST_VENDORS = 'vendors:requestVendors';
 export function requestVendors() {
@@ -8,10 +10,13 @@ export function requestVendors() {
 }
 
 function fetchVendors() {
+  const resource = dotenvConfiguration.API_URL ? VendorsResource : VendorsResourceMock;
+
   return dispatch => {
-    VendorsResource.getVendors((vendors) => {
-      dispatch(receiveVendors(vendors));
-    });
+    resource.getVendors()
+      .then((response) => {
+        dispatch(receiveVendors(response.data));
+      });
   }
 }
 

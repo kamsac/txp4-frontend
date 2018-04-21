@@ -21,10 +21,15 @@ const VENDORS = [
   },
 ];
 
-const VendorsResource = {
-  getVendors(cb) {
-    setTimeout(() => cb(VENDORS), 100);
+const VendorsResourceMock = {
+  getVendors() {
+    return new Promise((resolve, reject) => {
+      const response = {
+        data: VENDORS,
+      };
+      setTimeout(() => resolve(response), 100);
+    });
   },
 };
 
-export default VendorsResource;
+export default VendorsResourceMock;

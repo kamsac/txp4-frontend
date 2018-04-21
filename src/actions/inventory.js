@@ -1,4 +1,6 @@
-import InventoryResource from '../resources/inventory/mock';
+import dotenvConfiguration from '../dotenv-configuration';
+import InventoryResourceMock from '../resources/inventory/mock';
+import InventoryResource from '../resources/inventory';
 
 export const REQUEST_ITEMS = 'inventory:requestItems';
 export function requestItems() {
@@ -8,10 +10,13 @@ export function requestItems() {
 }
 
 function fetchItems() {
+  const resource = dotenvConfiguration.API_URL ? InventoryResource : InventoryResourceMock;
+
   return dispatch => {
-    InventoryResource.getItems((items) => {
-      dispatch(receiveItems(items));
-    });
+    resource.getItems()
+      .then((response) => {
+        dispatch(receiveItems(response.data));
+      });
   }
 }
 

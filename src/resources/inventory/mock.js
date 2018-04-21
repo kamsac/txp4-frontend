@@ -375,14 +375,24 @@ const ITEMS = [
   },
 ];
 
-const InventoryResource = {
-  getItems(cb) {
-    setTimeout(() => cb(ITEMS), 100);
+const InventoryResourceMock = {
+  getItems() {
+    return new Promise((resolve, reject) => {
+      const response = {
+        data: ITEMS,
+      };
+      setTimeout(() => resolve(response), 100);
+    });
   },
 
-  equipItem(item, cb) {
-    setTimeout(() => cb(ITEMS), 100);
+  equipItem(item) {
+    return new Promise((resolve, reject) => {
+      const response = {
+        data: ITEMS,
+      };
+      setTimeout(() => resolve(ITEMS), 100);
+    });
   },
 };
 
-export default InventoryResource;
+export default InventoryResourceMock;
