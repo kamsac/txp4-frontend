@@ -4,8 +4,12 @@ test('@@INIT', () => {
   const state = reducers(undefined, {});
   expect(state).toEqual({
     scores: [],
-    inventory: {
-      items: [],
+    player: {
+      login: '',
+      nick: '',
+      inventory: {
+        items: [],
+      },
     },
     vendors: [],
   });

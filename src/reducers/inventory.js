@@ -1,12 +1,12 @@
-import {EQUIP_ITEM, RECEIVE_ITEMS} from '../actions/inventory';
+import {EQUIP_ITEM, RECEIVE_INVENTORY} from '../actions/inventory';
 
-const initialValue = {
+const initialState = {
   items: [],
 };
 
-export function inventoryReducer(state = initialValue, action) {
+export function inventoryReducer(state = initialState, action) {
   switch(action.type) {
-    case RECEIVE_ITEMS:
+    case RECEIVE_INVENTORY:
       return Object.assign({}, state, {
         items: action.payload.items,
       });

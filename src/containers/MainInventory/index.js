@@ -4,7 +4,7 @@ import {requestVendors} from '../../actions/vendors';
 import Inventory from '../../components/Inventory';
 
 const mapStateToProps = state => ({
-  items: state.inventory.items,
+  items: state.player.inventory.items,
   equipRegions: ['tire', 'engine', 'transmission'],
   vendors: state.vendors,
 });

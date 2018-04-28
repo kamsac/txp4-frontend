@@ -1,8 +1,8 @@
 import {RECEIVE_VENDORS} from '../actions/vendors';
 
-const initialValue = [];
+const initialState = [];
 
-export function vendorsReducer(state = initialValue, action) {
+export function vendorsReducer(state = initialState, action) {
   switch(action.type) {
     case RECEIVE_VENDORS:
       return [...action.payload.vendors];

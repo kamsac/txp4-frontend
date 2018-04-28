@@ -1,8 +1,8 @@
 import dotenvConfiguration from '../dotenv-configuration';
-import InventoryResourceMock from '../resources/inventory/mock';
-import InventoryResource from '../resources/inventory';
+import PlayerResourceMock from '../resources/player/mock';
+import PlayerResource from '../resources/player';
 
-export const REQUEST_ITEMS = 'inventory:requestItems';
+export const REQUEST_INVENTORY = 'inventory:requestInventory';
 export function requestItems() {
   return dispatch => {
     dispatch(fetchItems());
@@ -10,20 +10,20 @@ export function requestItems() {
 }
 
 function fetchItems() {
-  const resource = dotenvConfiguration.API_URL ? InventoryResource : InventoryResourceMock;
+  const resource = dotenvConfiguration.API_URL ? PlayerResource : PlayerResourceMock;
 
   return dispatch => {
-    resource.getItems()
+    resource.getInventory()
       .then((response) => {
-        dispatch(receiveItems(response.data));
+        dispatch(receiveItems(response.data.items));
       });
   }
 }
 
-export const RECEIVE_ITEMS = 'inventory:receiveItems';
+export const RECEIVE_INVENTORY = 'inventory:receiveItems';
 export function receiveItems(items) {
   return {
-    type: RECEIVE_ITEMS,
+    type: RECEIVE_INVENTORY,
     payload: { items }
   }
 }

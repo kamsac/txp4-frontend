@@ -1,9 +1,9 @@
 import { inventoryReducer } from './inventory';
-import { RECEIVE_ITEMS, SELECT_ITEM, EQUIP_ITEM } from '../actions/inventory';
+import { RECEIVE_INVENTORY, SELECT_ITEM, EQUIP_ITEM } from '../actions/inventory';
 
 const any = null;
 
-test(`${RECEIVE_ITEMS}`, () => {
+test(`${RECEIVE_INVENTORY}`, () => {
   const items = [
     {
       id: 'a1a1a1',
@@ -58,7 +58,7 @@ test(`${RECEIVE_ITEMS}`, () => {
   };
 
   const action = {
-    type: RECEIVE_ITEMS,
+    type: RECEIVE_INVENTORY,
     payload: { items },
   };
 

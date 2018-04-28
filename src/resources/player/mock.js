@@ -375,17 +375,47 @@ const ITEMS = [
   },
 ];
 
-const InventoryResourceMock = {
-  getItems() {
+const PLAYER = {
+  login: 'lymak',
+  nick: '$s$o$a60l$c82y$fa3m$c82a$a60k',
+  inventory: {
+    items: ITEMS
+  }
+};
+
+const PlayerResourceMock = {
+  getPlayer(playerLogin) {
     return new Promise((resolve, reject) => {
       const response = {
-        data: ITEMS,
+        data: PLAYER,
       };
       setTimeout(() => resolve(response), 100);
     });
   },
 
-  equipItem(item) {
+  getInventory(playerLogin) {
+    return new Promise((resolve, reject) => {
+      const response = {
+        data: {
+          items: ITEMS
+        },
+      };
+      setTimeout(() => resolve(response), 100);
+    });
+  },
+
+  equipItem(playerLogin, itemId) {
+    return new Promise((resolve, reject) => {
+      const response = {
+        data: {
+          items: ITEMS
+        },
+      };
+      setTimeout(() => resolve(ITEMS), 100);
+    });
+  },
+
+  unequipItem(playerLogin, itemId) {
     return new Promise((resolve, reject) => {
       const response = {
         data: ITEMS,
@@ -395,4 +425,4 @@ const InventoryResourceMock = {
   },
 };
 
-export default InventoryResourceMock;
+export default PlayerResourceMock;
