@@ -55,7 +55,6 @@ test(`${RECEIVE_ITEMS}`, () => {
 
   const previousState = {
     items: [],
-    selectedItem: any,
   };
 
   const action = {
@@ -65,43 +64,6 @@ test(`${RECEIVE_ITEMS}`, () => {
 
   const expectedState = {
     items,
-    selectedItem: any,
-  };
-
-  const state = inventoryReducer(previousState, action);
-
-  expect(state).toEqual(expectedState);
-});
-
-test(`${SELECT_ITEM}`, () => {
-  const previousState = {
-    items: any,
-    selectedItem: null,
-  };
-
-  const selectedItem = {
-    id: 'c3c3c3',
-    name: 'Shit engine',
-    vendorId: 'ccc',
-    equipRegion: 'engine',
-    tier: 2,
-    isEquipped: false,
-    modifiers: [
-      {
-        name: 'maxSpeed',
-        value: 2
-      },
-    ]
-  };
-
-  const action = {
-    type: SELECT_ITEM,
-    payload: { selectedItem }
-  };
-
-  const expectedState = {
-    items: any,
-    selectedItem
   };
 
   const state = inventoryReducer(previousState, action);
@@ -211,7 +173,6 @@ describe(`${EQUIP_ITEM}`, () => {
 
     const previousState = {
       items: previousItems,
-      selectedItem: any,
     };
 
     const action = {
@@ -240,7 +201,6 @@ describe(`${EQUIP_ITEM}`, () => {
 
     const expectedState = {
       items: expectedItems,
-      selectedItem: any,
     };
 
     const state = inventoryReducer(previousState, action);
@@ -349,7 +309,6 @@ describe(`${EQUIP_ITEM}`, () => {
 
     const previousState = {
       items: previousItems,
-      selectedItem: any,
     };
 
     const action = {
@@ -378,7 +337,6 @@ describe(`${EQUIP_ITEM}`, () => {
 
     const expectedState = {
       items: expectedItems,
-      selectedItem: any,
     };
 
     const state = inventoryReducer(previousState, action);

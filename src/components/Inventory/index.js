@@ -7,6 +7,18 @@ import InventoryItem from '../InventoryItem';
 export default class Inventory extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      selectedItem: null,
+    };
+
+    this.selectItem = this.selectItem.bind(this);
+  }
+
+  selectItem(item) {
+    this.setState({
+      selectedItem: item
+    })
   }
 
   componentDidMount() {
@@ -22,8 +34,8 @@ export default class Inventory extends React.Component {
           <InventoryItem
             key={item.id}
             item={item}
-            selectedItem={this.props.selectedItem}
-            onSelectItem={this.props.onSelectItem}
+            selectedItem={this.state.selectedItem}
+            onSelectItem={this.selectItem}
             vendors={this.props.vendors}
           />
         );
@@ -40,7 +52,7 @@ export default class Inventory extends React.Component {
           {items}
         </div>
         <InventoryItemDetails
-          item={this.props.selectedItem}
+          item={this.state.selectedItem}
           onEquipItem={this.props.onEquipItem}
           vendors={this.props.vendors}
         />

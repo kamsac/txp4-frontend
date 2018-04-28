@@ -35,25 +35,6 @@ test('receiveItems', () => {
   expect(receiveItems(someItems)).toMatchSnapshot();
 });
 
-test('selectItem', () => {
-  const someItem = {
-    id: "e5e5e5",
-    name: "Tire",
-    vendorId: 'aaa',
-    equipRegion: "tire",
-    tier: 3,
-    isEquipped: false,
-    modifiers: [
-      {
-        name: "maxSpeed",
-        value: 1,
-      },
-    ],
-  };
-
-  expect(selectItem(someItem)).toMatchSnapshot();
-});
-
 test('equipItem', () => {
   const someItem = {
     id: "e5e5e5",

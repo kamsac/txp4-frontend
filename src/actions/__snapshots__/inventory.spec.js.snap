@@ -59,25 +59,3 @@ Object {
   "type": "inventory:receiveItems",
 }
 `;
-
-exports[`selectItem 1`] = `
-Object {
-  "payload": Object {
-    "selectedItem": Object {
-      "equipRegion": "tire",
-      "id": "e5e5e5",
-      "isEquipped": false,
-      "modifiers": Array [
-        Object {
-          "name": "maxSpeed",
-          "value": 1,
-        },
-      ],
-      "name": "Tire",
-      "tier": 3,
-      "vendorId": "aaa",
-    },
-  },
-  "type": "inventory:selectItem",
-}
-`;

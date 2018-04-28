@@ -1,8 +1,7 @@
-import {EQUIP_ITEM, RECEIVE_ITEMS, SELECT_ITEM} from '../actions/inventory';
+import {EQUIP_ITEM, RECEIVE_ITEMS} from '../actions/inventory';
 
 const initialValue = {
   items: [],
-  selectedItem: null,
 };
 
 export function inventoryReducer(state = initialValue, action) {
@@ -10,11 +9,6 @@ export function inventoryReducer(state = initialValue, action) {
     case RECEIVE_ITEMS:
       return Object.assign({}, state, {
         items: action.payload.items,
-      });
-
-    case SELECT_ITEM:
-      return Object.assign({}, state, {
-        selectedItem: action.payload.selectedItem,
       });
 
     case EQUIP_ITEM:

@@ -6,8 +6,7 @@ test('@@INIT', () => {
     scores: [],
     inventory: {
       items: [],
-      selectedItem: null
     },
-    vendors: []
+    vendors: [],
   });
 });
