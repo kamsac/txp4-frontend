@@ -7,7 +7,3 @@
   grid-gap: $grid-gap-large;
   grid-template-areas: "Navbar" "PageContent";
 }
-
-.PageContent {
-  grid-area: PageContent;
-}

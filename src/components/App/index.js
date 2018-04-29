@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import './styles.scss';
 import { BrowserRouter, Route } from 'react-router-dom'
-import MainScoreTable from '../../containers/MainScoreTable';
-import MainInventory from '../../containers/MainInventory';
-import Navbar from '../Navbar';
+import InventoryPage from '../InventoryPage';
+import ScoresPage from '../ScoresPage';
 
 export default class App extends Component {
   constructor(props) {
@@ -14,11 +13,8 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <Navbar/>
-          <div className="PageContent">
-            <Route exact path="/scores" component={MainScoreTable} />
-            <Route exact path="/inventory" component={MainInventory} />
-          </div>
+          <Route exact path="/inventory" component={InventoryPage} />
+          <Route exact path="/scores" component={ScoresPage} />
         </div>
       </BrowserRouter>
     );
