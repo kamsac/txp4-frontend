@@ -1,12 +1,12 @@
-import {receivePlayer} from './player';
+import { receivePlayer } from './player';
 
 test('receivePlayer', () => {
   const somePlayer = {
     login: 'someLogin',
     nick: 'someNick',
     inventory: {
-      items: []
-    }
+      items: [],
+    },
   };
   expect(receivePlayer(somePlayer)).toMatchSnapshot();
 });

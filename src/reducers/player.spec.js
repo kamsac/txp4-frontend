@@ -1,5 +1,5 @@
-import {playerReducer} from './player';
-import {RECEIVE_PLAYER, receivePlayer} from '../actions/player';
+import playerReducer from './player';
+import { RECEIVE_PLAYER, receivePlayer } from '../actions/player';
 
 const any = null;
 

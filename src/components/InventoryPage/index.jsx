@@ -1,12 +1,8 @@
 import React from 'react';
-import Page from '../Page';
-import MainInventory from '../../containers/MainInventory';
+import Page from '../Page/index';
+import MainInventory from '../../containers/MainInventory/index';
 
 export default class InventoryPage extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <Page>

@@ -1,7 +1,5 @@
-import { inventoryReducer } from './inventory';
-import { RECEIVE_INVENTORY, SELECT_ITEM, EQUIP_ITEM } from '../actions/inventory';
-
-const any = null;
+import inventoryReducer from './inventory';
+import { RECEIVE_INVENTORY, EQUIP_ITEM } from '../actions/inventory';
 
 test(`${RECEIVE_INVENTORY}`, () => {
   const items = [
@@ -15,9 +13,9 @@ test(`${RECEIVE_INVENTORY}`, () => {
       modifiers: [
         {
           name: 'maxSpeed',
-          value: 1
+          value: 1,
         },
-      ]
+      ],
     },
     {
       id: 'b2b2b2',
@@ -29,13 +27,13 @@ test(`${RECEIVE_INVENTORY}`, () => {
       modifiers: [
         {
           name: 'maxSpeed',
-          value: 0.4
+          value: 0.4,
         },
         {
           name: 'acceleration',
-          value: 1
+          value: 1,
         },
-      ]
+      ],
     },
     {
       id: 'c3c3c3',
@@ -47,9 +45,9 @@ test(`${RECEIVE_INVENTORY}`, () => {
       modifiers: [
         {
           name: 'maxSpeed',
-          value: 2
+          value: 2,
         },
-      ]
+      ],
     },
   ];
 
@@ -72,7 +70,7 @@ test(`${RECEIVE_INVENTORY}`, () => {
 });
 
 describe(`${EQUIP_ITEM}`, () => {
-  it(`should equip first item`, () => {
+  it('should equip first item', () => {
     const previousItems = [
       {
         id: 'a1a1a1',
@@ -84,9 +82,9 @@ describe(`${EQUIP_ITEM}`, () => {
         modifiers: [
           {
             name: 'maxSpeed',
-            value: 1
+            value: 1,
           },
-        ]
+        ],
       },
       {
         id: 'b2b2b2',
@@ -98,13 +96,13 @@ describe(`${EQUIP_ITEM}`, () => {
         modifiers: [
           {
             name: 'maxSpeed',
-            value: 0.4
+            value: 0.4,
           },
           {
             name: 'acceleration',
-            value: 1
+            value: 1,
           },
-        ]
+        ],
       },
       {
         id: 'c3c3c3',
@@ -116,9 +114,9 @@ describe(`${EQUIP_ITEM}`, () => {
         modifiers: [
           {
             name: 'maxSpeed',
-            value: 2
+            value: 2,
           },
-        ]
+        ],
       },
     ];
 
@@ -133,9 +131,9 @@ describe(`${EQUIP_ITEM}`, () => {
         modifiers: [
           {
             name: 'maxSpeed',
-            value: 1
+            value: 1,
           },
-        ]
+        ],
       },
       {
         id: 'b2b2b2',
@@ -147,13 +145,13 @@ describe(`${EQUIP_ITEM}`, () => {
         modifiers: [
           {
             name: 'maxSpeed',
-            value: 0.4
+            value: 0.4,
           },
           {
             name: 'acceleration',
-            value: 1
+            value: 1,
           },
-        ]
+        ],
       },
       {
         id: 'c3c3c3',
@@ -165,9 +163,9 @@ describe(`${EQUIP_ITEM}`, () => {
         modifiers: [
           {
             name: 'maxSpeed',
-            value: 2
+            value: 2,
           },
-        ]
+        ],
       },
     ];
 
@@ -188,13 +186,13 @@ describe(`${EQUIP_ITEM}`, () => {
           modifiers: [
             {
               name: 'maxSpeed',
-              value: 0.4
+              value: 0.4,
             },
             {
               name: 'acceleration',
-              value: 1
+              value: 1,
             },
-          ]
+          ],
         },
       },
     };
@@ -208,7 +206,7 @@ describe(`${EQUIP_ITEM}`, () => {
     expect(state.items).toEqual(expectedState.items);
   });
 
-  it(`should equip item with same equip region as previous one and override it`, () => {
+  it('should equip item with same equip region as previous one and override it', () => {
     const previousItems = [
       {
         id: 'a1a1a1',
@@ -220,9 +218,9 @@ describe(`${EQUIP_ITEM}`, () => {
         modifiers: [
           {
             name: 'maxSpeed',
-            value: 1
+            value: 1,
           },
-        ]
+        ],
       },
       {
         id: 'b2b2b2',
@@ -234,13 +232,13 @@ describe(`${EQUIP_ITEM}`, () => {
         modifiers: [
           {
             name: 'maxSpeed',
-            value: 0.4
+            value: 0.4,
           },
           {
             name: 'acceleration',
-            value: 1
+            value: 1,
           },
-        ]
+        ],
       },
       {
         id: 'c3c3c3',
@@ -252,9 +250,9 @@ describe(`${EQUIP_ITEM}`, () => {
         modifiers: [
           {
             name: 'maxSpeed',
-            value: 2
+            value: 2,
           },
-        ]
+        ],
       },
     ];
 
@@ -269,9 +267,9 @@ describe(`${EQUIP_ITEM}`, () => {
         modifiers: [
           {
             name: 'maxSpeed',
-            value: 1
+            value: 1,
           },
-        ]
+        ],
       },
       {
         id: 'b2b2b2',
@@ -283,13 +281,13 @@ describe(`${EQUIP_ITEM}`, () => {
         modifiers: [
           {
             name: 'maxSpeed',
-            value: 0.4
+            value: 0.4,
           },
           {
             name: 'acceleration',
-            value: 1
+            value: 1,
           },
-        ]
+        ],
       },
       {
         id: 'c3c3c3',
@@ -301,9 +299,9 @@ describe(`${EQUIP_ITEM}`, () => {
         modifiers: [
           {
             name: 'maxSpeed',
-            value: 2
+            value: 2,
           },
-        ]
+        ],
       },
     ];
 
@@ -324,13 +322,13 @@ describe(`${EQUIP_ITEM}`, () => {
           modifiers: [
             {
               name: 'maxSpeed',
-              value: 0.4
+              value: 0.4,
             },
             {
               name: 'acceleration',
-              value: 1
+              value: 1,
             },
-          ]
+          ],
         },
       },
     };

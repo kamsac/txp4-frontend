@@ -1,18 +1,15 @@
 import React from 'react';
-import './styles.scss';
 import classNames from 'classnames';
+import './styles.scss';
+import { ItemPropTypesShape } from '../../prop-types';
 
 export default class InventoryItemModifiers extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const modifiers = this.props.item.modifiers
-      .filter((modifier) => modifier.value !== 1)
+      .filter(modifier => modifier.value !== 1)
       .sort((modifierA, modifierB) => modifierB.value - modifierA.value)
       .map((modifier) => {
-        const percent = Math.round(modifier.value * 100) + '%';
+        const percent = `${Math.round(modifier.value * 100)}%`;
         const className = classNames('InventoryItemModifiers-modifier', {
           'InventoryItemModifiers-modifier--positive': modifier.value > 1,
           'InventoryItemModifiers-modifier--negative': modifier.value < 1,
@@ -26,6 +23,10 @@ export default class InventoryItemModifiers extends React.Component {
       <ul className="InventoryItemModifiers">
         {modifiers}
       </ul>
-    )
+    );
   }
 }
+
+InventoryItemModifiers.propTypes = {
+  item: ItemPropTypesShape.isRequired,
+};

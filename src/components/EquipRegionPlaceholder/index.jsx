@@ -1,11 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './styles.scss';
 
-export default class EquipRegionPlaceholder extends React.Component{
-  constructor(props) {
-    super(props);
-  }
-
+export default class EquipRegionPlaceholder extends React.Component {
   render() {
     const imageClassName = `InventoryItem--${this.props.equipRegion}`;
     const itemClassName = `EquipRegionPlaceholder__Item ${imageClassName}`;
@@ -18,6 +15,10 @@ export default class EquipRegionPlaceholder extends React.Component{
           <p>No custom {this.props.equipRegion} is equipped.</p>
         </div>
       </div>
-    )
-  };
+    );
+  }
 }
+
+EquipRegionPlaceholder.propTypes = {
+  equipRegion: PropTypes.string.isRequired,
+};

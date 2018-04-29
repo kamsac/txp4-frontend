@@ -1,6 +1,6 @@
 import React from 'react';
-import './styles.scss';
 import { Link } from 'react-router-dom';
+import './styles.scss';
 
 export default class Navbar extends React.Component {
   constructor(props) {
@@ -15,17 +15,17 @@ export default class Navbar extends React.Component {
         href: '/scores',
         label: 'Scores',
       },
-    ]
+    ];
   }
 
   render() {
-    const navigationItems = this.navigationItems.map((navigationItem) => {
-      return (
-        <li key={navigationItem.label} className="NavigationItem">
-          <Link to={navigationItem.href} className="NavigationItem__anchor">{navigationItem.label}</Link>
-        </li>
-      );
-    });
+    const navigationItems = this.navigationItems.map(navigationItem => (
+      <li key={navigationItem.label} className="NavigationItem">
+        <Link to={navigationItem.href} className="NavigationItem__anchor">
+          {navigationItem.label}
+        </Link>
+      </li>
+    ));
 
     return (
       <div className="Navbar">

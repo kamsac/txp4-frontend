@@ -8,14 +8,20 @@ module.exports = {
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:9000',
     'webpack/hot/only-dev-server',
-    './src/entry.js',
+    './src/entry.jsx',
   ],
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'app.js'
+    filename: 'app.js',
   },
   module: {
     rules: [
+      {
+        enforce: 'pre',
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
+      },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
@@ -67,7 +73,9 @@ module.exports = {
       template: 'src/index.html',
     }),
   ],
-  resolve: {},
+  resolve: {
+    extensions: ['.js', '.jsx', '.json'],
+  },
   devtool: 'cheap-eval-source-map',
   devServer: {
     contentBase: path.resolve(__dirname, 'build'),

@@ -1,31 +1,31 @@
-import { equipItem, receiveItems, selectItem } from './inventory';
+import { equipItem, receiveItems } from './inventory';
 
 test('receiveItems', () => {
   const someItems = [
     {
-      id: "a1a1a1",
-      name: "Tire",
+      id: 'a1a1a1',
+      name: 'Tire',
       vendorId: 'aaa',
-      equipRegion: "tire",
+      equipRegion: 'tire',
       tier: 3,
       isEquipped: true,
       modifiers: [
         {
-          name: "acceleration",
+          name: 'acceleration',
           value: 1.2,
         },
       ],
     },
     {
-      id: "b2b2b2",
-      name: "Less tired",
+      id: 'b2b2b2',
+      name: 'Less tired',
       vendorId: 'bbb',
-      equipRegion: "tire",
+      equipRegion: 'tire',
       tier: 1,
       isEquipped: false,
       modifiers: [
         {
-          name: "maxSpeed",
+          name: 'maxSpeed',
           value: 0.4,
         },
       ],
@@ -37,15 +37,15 @@ test('receiveItems', () => {
 
 test('equipItem', () => {
   const someItem = {
-    id: "e5e5e5",
-    name: "Tire",
+    id: 'e5e5e5',
+    name: 'Tire',
     vendorId: 'aaa',
-    equipRegion: "tire",
+    equipRegion: 'tire',
     tier: 3,
     isEquipped: false,
     modifiers: [
       {
-        name: "maxSpeed",
+        name: 'maxSpeed',
         value: 1,
       },
     ],

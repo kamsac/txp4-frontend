@@ -1,15 +1,12 @@
 import React from 'react';
-import Navbar from '../Navbar';
+import PropTypes from 'prop-types';
+import Navbar from '../Navbar/index';
 
 export default class Page extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className="Page">
-        <Navbar/>
+        <Navbar />
         <div className="PageContent">
           {this.props.children}
         </div>
@@ -17,3 +14,7 @@ export default class Page extends React.Component {
     );
   }
 }
+
+Page.propTypes = {
+  children: PropTypes.element.isRequired,
+};

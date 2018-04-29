@@ -2,78 +2,78 @@ const SCORES = [
   {
     player: {
       login: 'lymak',
-      nickname: 'lymak',
+      nick: 'lymak',
     },
-    points: 4242,
+    score: 4242,
   },
   {
     player: {
       login: 'kibes',
-      nickname: 'kibes',
+      nick: 'kibes',
     },
-    points: 3232,
+    score: 3232,
   },
   {
     player: {
       login: 'tomek',
-      nickname: 'tomek',
+      nick: 'tomek',
     },
-    points: 2416,
+    score: 2416,
   },
   {
     player: {
       login: 'omed',
-      nickname: 'omed',
+      nick: 'omed',
     },
-    points: 2000,
+    score: 2000,
   },
   {
     player: {
       login: 'tar',
-      nickname: 'tar',
+      nick: 'tar',
     },
-    points: 1960,
+    score: 1960,
   },
   {
     player: {
       login: 'oiz',
-      nickname: 'oiz',
+      nick: 'oiz',
     },
-    points: 680,
+    score: 680,
   },
   {
     player: {
       login: 'xetrow',
-      nickname: 'xetrow',
+      nick: 'xetrow',
     },
-    points: 403,
+    score: 403,
   },
   {
     player: {
       login: 'ginok',
-      nickname: 'ginok',
+      nick: 'ginok',
     },
-    points: 30,
+    score: 30,
   },
   {
     player: {
       login: 'llif',
-      nickname: 'llif',
+      nick: 'llif',
     },
-    points: 20,
+    score: 20,
   },
   {
     player: {
       login: 'ida',
-      nickname: 'ida',
+      nick: 'ida',
     },
-    points: 10,
+    score: 10,
   },
 ];
 
 const ScoresResourceMock = {
   getScores() {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       const response = {
         data: SCORES,
       };

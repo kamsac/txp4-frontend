@@ -1,7 +1,7 @@
-import {connect} from 'react-redux';
-import {equipItem, selectItem, requestItems} from '../../actions/inventory';
-import {requestVendors} from '../../actions/vendors';
-import Inventory from '../../components/Inventory';
+import { connect } from 'react-redux';
+import { equipItem, requestItems } from '../../actions/inventory';
+import { requestVendors } from '../../actions/vendors';
+import Inventory from '../../components/Inventory/index';
 
 const mapStateToProps = state => ({
   items: state.player.inventory.items,

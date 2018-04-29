@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import './styles.scss';
-import { BrowserRouter, Route } from 'react-router-dom'
-import InventoryPage from '../InventoryPage';
-import ScoresPage from '../ScoresPage';
+import InventoryPage from '../InventoryPage/index';
+import ScoresPage from '../ScoresPage/index';
 
 export default class App extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <BrowserRouter>

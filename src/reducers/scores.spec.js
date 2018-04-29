@@ -1,4 +1,4 @@
-import { scoresReducer } from './scores';
+import scoresReducer from './scores';
 import { RECEIVE_SCORES } from '../actions/scores';
 
 test(`${RECEIVE_SCORES}`, () => {

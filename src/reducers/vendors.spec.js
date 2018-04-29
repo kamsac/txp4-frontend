@@ -1,27 +1,27 @@
-import { vendorsReducer } from './vendors';
+import vendorsReducer from './vendors';
 import { RECEIVE_VENDORS } from '../actions/vendors';
 
 test(`${RECEIVE_VENDORS}`, () => {
   const vendors = [
     {
       id: 'aaa',
-      name: "Super",
-      color: "#8f0",
+      name: 'Super',
+      color: '#8f0',
     },
     {
       id: 'bbb',
-      name: "Safe",
-      color: "#f80",
+      name: 'Safe',
+      color: '#f80',
     },
     {
       id: 'ccc',
-      name: "Heavy",
-      color: "#800",
+      name: 'Heavy',
+      color: '#800',
     },
     {
       id: 'ddd',
-      name: "Light",
-      color: "#08f",
+      name: 'Light',
+      color: '#08f',
     },
   ];
 
