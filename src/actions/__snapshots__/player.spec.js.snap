@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`receivePlayer 1`] = `
+Object {
+  "payload": Object {
+    "player": Object {
+      "inventory": Object {
+        "items": Array [],
+      },
+      "login": "someLogin",
+      "nick": "someNick",
+    },
+  },
+  "type": "player:receivePlayer",
+}
+`;

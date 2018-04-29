@@ -13,7 +13,7 @@ const initialState = {
 export function playerReducer(state = initialState, action) {
   switch(action.type) {
     case RECEIVE_PLAYER:
-      return Object.assign({}, state, action.payload);
+      return Object.assign({}, state, action.payload.player);
 
     case REQUEST_INVENTORY:
     case RECEIVE_INVENTORY:
