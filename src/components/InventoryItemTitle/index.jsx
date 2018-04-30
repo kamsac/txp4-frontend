@@ -14,8 +14,9 @@ export default class InventoryItemTitle extends React.Component {
         {
           vendor ?
             <h1 className="InventoryItemTitle-header">
-              <span style={{ color: vendor.color }}>{vendor.name}</span>
-              {item.name} (tier {item.tier})
+              <span style={{ color: vendor.color }}>
+                {vendor.name}
+              </span> {item.name} (tier {item.tier})
             </h1>
             :
             <h1 className="InventoryItemTitle-header">{item.name} (tier {item.tier})</h1>
