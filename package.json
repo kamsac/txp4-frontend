@@ -13,7 +13,7 @@
     "test:update": "jest --updateSnapshot",
     "test:coverage": "jest --coverage",
     "lint": "eslint src/**/*.{js,jsx}",
-    "lint:watch": "yarn lint & chokidar \"src/**/*.{js,jsx}\" --command \"yarn lint\"",
+    "lint:watch": "chokidar \"src/**/*.{js,jsx}\" --command \"yarn lint\" --initial",
     "lint:fix": "eslint src/**/*.{js,jsx} --fix"
   },
   "dependencies": {
