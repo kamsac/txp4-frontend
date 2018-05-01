@@ -10,7 +10,7 @@ export function receiveScores(scores) {
   };
 }
 
-function fetchScores() {
+export function fetchScores() {
   const resource = dotenvConfiguration.API_URL ? ScoresResource : ScoresResourceMock;
 
   return (dispatch) => {

@@ -1,4 +1,4 @@
-const SCORES = [
+export const SCORES = [
   {
     player: {
       login: 'lymak',

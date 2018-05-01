@@ -1,4 +1,4 @@
-const VENDORS = [
+export const VENDORS = [
   {
     id: 'aaa',
     name: 'Super',

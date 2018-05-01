@@ -10,7 +10,7 @@ export function receiveVendors(vendors) {
   };
 }
 
-function fetchVendors() {
+export function fetchVendors() {
   const resource = dotenvConfiguration.API_URL ? VendorsResource : VendorsResourceMock;
 
   return (dispatch) => {

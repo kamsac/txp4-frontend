@@ -7,23 +7,72 @@ Object {
       Object {
         "player": Object {
           "login": "lymak",
-          "nickname": "lymak",
+          "nick": "lymak",
         },
-        "points": 4242,
+        "score": 4242,
       },
       Object {
         "player": Object {
           "login": "kibes",
-          "nickname": "kibes",
+          "nick": "kibes",
         },
-        "points": 3232,
+        "score": 3232,
       },
       Object {
         "player": Object {
           "login": "tomek",
-          "nickname": "tomek",
+          "nick": "tomek",
         },
-        "points": 2416,
+        "score": 2416,
+      },
+      Object {
+        "player": Object {
+          "login": "omed",
+          "nick": "omed",
+        },
+        "score": 2000,
+      },
+      Object {
+        "player": Object {
+          "login": "tar",
+          "nick": "tar",
+        },
+        "score": 1960,
+      },
+      Object {
+        "player": Object {
+          "login": "oiz",
+          "nick": "oiz",
+        },
+        "score": 680,
+      },
+      Object {
+        "player": Object {
+          "login": "xetrow",
+          "nick": "xetrow",
+        },
+        "score": 403,
+      },
+      Object {
+        "player": Object {
+          "login": "ginok",
+          "nick": "ginok",
+        },
+        "score": 30,
+      },
+      Object {
+        "player": Object {
+          "login": "llif",
+          "nick": "llif",
+        },
+        "score": 20,
+      },
+      Object {
+        "player": Object {
+          "login": "ida",
+          "nick": "ida",
+        },
+        "score": 10,
       },
     ],
   },
