@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InventoryItemDetails> with no selected item 1`] = `
+<div
+  className="InventoryItemDetails"
+>
+  <p>
+    Select item to display details.
+  </p>
+</div>
+`;
+
+exports[`<InventoryItemDetails> with selected item 1`] = `
+<div
+  className="InventoryItemDetails"
+>
+  <InventoryItemTitle
+    item={
+      Object {
+        "equipRegion": "tire",
+        "id": "a1a1a1",
+        "isEquipped": true,
+        "modifiers": Array [
+          Object {
+            "name": "maxSpeed",
+            "value": 1,
+          },
+          Object {
+            "name": "acceleration",
+            "value": 1.2,
+          },
+          Object {
+            "name": "steering",
+            "value": 1.1,
+          },
+          Object {
+            "name": "breaking",
+            "value": 1.2,
+          },
+          Object {
+            "name": "grip",
+            "value": 1.5,
+          },
+          Object {
+            "name": "gravity",
+            "value": 1,
+          },
+        ],
+        "name": "Tire",
+        "tier": 3,
+        "vendorId": "aaa",
+      }
+    }
+    vendors={
+      Array [
+        Object {
+          "color": "#8f0",
+          "id": "aaa",
+          "name": "Super",
+        },
+        Object {
+          "color": "#f80",
+          "id": "bbb",
+          "name": "Safe",
+        },
+        Object {
+          "color": "#800",
+          "id": "ccc",
+          "name": "Heavy",
+        },
+        Object {
+          "color": "#08f",
+          "id": "ddd",
+          "name": "Light",
+        },
+      ]
+    }
+  />
+  <InventoryItemModifiers
+    item={
+      Object {
+        "equipRegion": "tire",
+        "id": "a1a1a1",
+        "isEquipped": true,
+        "modifiers": Array [
+          Object {
+            "name": "maxSpeed",
+            "value": 1,
+          },
+          Object {
+            "name": "acceleration",
+            "value": 1.2,
+          },
+          Object {
+            "name": "steering",
+            "value": 1.1,
+          },
+          Object {
+            "name": "breaking",
+            "value": 1.2,
+          },
+          Object {
+            "name": "grip",
+            "value": 1.5,
+          },
+          Object {
+            "name": "gravity",
+            "value": 1,
+          },
+        ],
+        "name": "Tire",
+        "tier": 3,
+        "vendorId": "aaa",
+      }
+    }
+  />
+  <button
+    onClick={[Function]}
+  >
+    Equip this item
+  </button>
+</div>
+`;

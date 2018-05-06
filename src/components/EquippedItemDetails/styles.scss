@@ -1,7 +1,7 @@
 @import '../../variables';
 
-.EquippedInventoryItemDetails {
+.EquippedItemDetails {
   border: $border-width solid $black;
   border-radius: $border-radius;
-  grid-area: EquippedInventoryItemDetails;
+  grid-area: EquippedItemDetails;
 }

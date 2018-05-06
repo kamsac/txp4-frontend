@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EquipRegionPlaceholder> 1`] = `
+<div
+  className="EquipRegionPlaceholder"
+>
+  <div
+    className="EquipRegionPlaceholder__Item InventoryItem--tire"
+  />
+  <div
+    className="EquipRegionPlaceholder__Details"
+  >
+    <h1
+      className="EquipRegionPlaceholder__Title"
+    >
+      tire
+    </h1>
+    <p>
+      No custom 
+      tire
+       is equipped.
+    </p>
+  </div>
+</div>
+`;

@@ -1,0 +1,1101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Inventory> 1`] = `
+<div
+  className="Inventory"
+>
+  <EquippedItems
+    equipRegions={
+      Array [
+        "tire",
+        "engine",
+        "transmission",
+      ]
+    }
+    items={
+      Array [
+        Object {
+          "equipRegion": "tire",
+          "id": "a1a1a1",
+          "isEquipped": true,
+          "modifiers": Array [
+            Object {
+              "name": "maxSpeed",
+              "value": 1,
+            },
+            Object {
+              "name": "acceleration",
+              "value": 1.2,
+            },
+            Object {
+              "name": "steering",
+              "value": 1.1,
+            },
+            Object {
+              "name": "breaking",
+              "value": 1.2,
+            },
+            Object {
+              "name": "grip",
+              "value": 1.5,
+            },
+            Object {
+              "name": "gravity",
+              "value": 1,
+            },
+          ],
+          "name": "Tire",
+          "tier": 3,
+          "vendorId": "aaa",
+        },
+        Object {
+          "equipRegion": "tire",
+          "id": "b2b2b2",
+          "isEquipped": false,
+          "modifiers": Array [
+            Object {
+              "name": "maxSpeed",
+              "value": 0.4,
+            },
+            Object {
+              "name": "acceleration",
+              "value": 1,
+            },
+            Object {
+              "name": "steering",
+              "value": 1.4,
+            },
+            Object {
+              "name": "breaking",
+              "value": 2,
+            },
+            Object {
+              "name": "grip",
+              "value": 3,
+            },
+            Object {
+              "name": "gravity",
+              "value": 1,
+            },
+          ],
+          "name": "Less tired",
+          "tier": 1,
+          "vendorId": "bbb",
+        },
+        Object {
+          "equipRegion": "engine",
+          "id": "c3c3c3",
+          "isEquipped": false,
+          "modifiers": Array [
+            Object {
+              "name": "maxSpeed",
+              "value": 2,
+            },
+            Object {
+              "name": "acceleration",
+              "value": 1.8,
+            },
+            Object {
+              "name": "steering",
+              "value": 1,
+            },
+            Object {
+              "name": "breaking",
+              "value": 1,
+            },
+            Object {
+              "name": "grip",
+              "value": 0.2,
+            },
+            Object {
+              "name": "gravity",
+              "value": 1.5,
+            },
+          ],
+          "name": "Shit engine",
+          "tier": 2,
+          "vendorId": "ccc",
+        },
+        Object {
+          "equipRegion": "tire",
+          "id": "d4d4d4",
+          "isEquipped": false,
+          "modifiers": Array [
+            Object {
+              "name": "maxSpeed",
+              "value": 1,
+            },
+            Object {
+              "name": "acceleration",
+              "value": 1,
+            },
+            Object {
+              "name": "steering",
+              "value": 1,
+            },
+            Object {
+              "name": "breaking",
+              "value": 1.1,
+            },
+            Object {
+              "name": "grip",
+              "value": 0.8,
+            },
+            Object {
+              "name": "gravity",
+              "value": 0.9,
+            },
+          ],
+          "name": "Some tire",
+          "tier": 2,
+          "vendorId": "ddd",
+        },
+        Object {
+          "equipRegion": "tire",
+          "id": "e5e5e5",
+          "isEquipped": false,
+          "modifiers": Array [
+            Object {
+              "name": "maxSpeed",
+              "value": 1,
+            },
+            Object {
+              "name": "acceleration",
+              "value": 1.2,
+            },
+            Object {
+              "name": "steering",
+              "value": 1.1,
+            },
+            Object {
+              "name": "breaking",
+              "value": 1.2,
+            },
+            Object {
+              "name": "grip",
+              "value": 1.5,
+            },
+            Object {
+              "name": "gravity",
+              "value": 1,
+            },
+          ],
+          "name": "Tire",
+          "tier": 3,
+          "vendorId": "aaa",
+        },
+        Object {
+          "equipRegion": "engine",
+          "id": "f6f6f6",
+          "isEquipped": false,
+          "modifiers": Array [
+            Object {
+              "name": "maxSpeed",
+              "value": 1.5,
+            },
+            Object {
+              "name": "acceleration",
+              "value": 3,
+            },
+            Object {
+              "name": "steering",
+              "value": 1,
+            },
+            Object {
+              "name": "breaking",
+              "value": 1,
+            },
+            Object {
+              "name": "grip",
+              "value": 1,
+            },
+            Object {
+              "name": "gravity",
+              "value": 1.5,
+            },
+          ],
+          "name": "Duper engine",
+          "tier": 2,
+          "vendorId": "aaa",
+        },
+        Object {
+          "equipRegion": "tire",
+          "id": "f7f7f7",
+          "isEquipped": false,
+          "modifiers": Array [
+            Object {
+              "name": "maxSpeed",
+              "value": 1,
+            },
+            Object {
+              "name": "acceleration",
+              "value": 1.2,
+            },
+            Object {
+              "name": "steering",
+              "value": 1.1,
+            },
+            Object {
+              "name": "breaking",
+              "value": 1.2,
+            },
+            Object {
+              "name": "grip",
+              "value": 1.5,
+            },
+            Object {
+              "name": "gravity",
+              "value": 1,
+            },
+          ],
+          "name": "Tire",
+          "tier": 3,
+          "vendorId": "aaa",
+        },
+        Object {
+          "equipRegion": "tire",
+          "id": "g8g8g8",
+          "isEquipped": false,
+          "modifiers": Array [
+            Object {
+              "name": "maxSpeed",
+              "value": 0.4,
+            },
+            Object {
+              "name": "acceleration",
+              "value": 1,
+            },
+            Object {
+              "name": "steering",
+              "value": 1.4,
+            },
+            Object {
+              "name": "breaking",
+              "value": 2,
+            },
+            Object {
+              "name": "grip",
+              "value": 3,
+            },
+            Object {
+              "name": "gravity",
+              "value": 1,
+            },
+          ],
+          "name": "Less tired",
+          "tier": 1,
+          "vendorId": "bbb",
+        },
+        Object {
+          "equipRegion": "engine",
+          "id": "h9h9h9",
+          "isEquipped": false,
+          "modifiers": Array [
+            Object {
+              "name": "maxSpeed",
+              "value": 2,
+            },
+            Object {
+              "name": "acceleration",
+              "value": 1.8,
+            },
+            Object {
+              "name": "steering",
+              "value": 1,
+            },
+            Object {
+              "name": "breaking",
+              "value": 1,
+            },
+            Object {
+              "name": "grip",
+              "value": 0.2,
+            },
+            Object {
+              "name": "gravity",
+              "value": 1.5,
+            },
+          ],
+          "name": "Shit engine",
+          "tier": 2,
+          "vendorId": "ccc",
+        },
+        Object {
+          "equipRegion": "tire",
+          "id": "i0i0i0",
+          "isEquipped": false,
+          "modifiers": Array [
+            Object {
+              "name": "maxSpeed",
+              "value": 1,
+            },
+            Object {
+              "name": "acceleration",
+              "value": 1,
+            },
+            Object {
+              "name": "steering",
+              "value": 1,
+            },
+            Object {
+              "name": "breaking",
+              "value": 1.1,
+            },
+            Object {
+              "name": "grip",
+              "value": 0.8,
+            },
+            Object {
+              "name": "gravity",
+              "value": 0.9,
+            },
+          ],
+          "name": "Some tire",
+          "tier": 2,
+          "vendorId": "ddd",
+        },
+        Object {
+          "equipRegion": "transmission",
+          "id": "j1j1j1",
+          "isEquipped": false,
+          "modifiers": Array [
+            Object {
+              "name": "maxSpeed",
+              "value": 0.7,
+            },
+            Object {
+              "name": "acceleration",
+              "value": 1.5,
+            },
+            Object {
+              "name": "steering",
+              "value": 1,
+            },
+            Object {
+              "name": "breaking",
+              "value": 1,
+            },
+            Object {
+              "name": "grip",
+              "value": 1,
+            },
+            Object {
+              "name": "gravity",
+              "value": 1,
+            },
+          ],
+          "name": "Transmission",
+          "tier": 3,
+          "vendorId": "ccc",
+        },
+      ]
+    }
+    vendors={
+      Array [
+        Object {
+          "color": "#8f0",
+          "id": "aaa",
+          "name": "Super",
+        },
+        Object {
+          "color": "#f80",
+          "id": "bbb",
+          "name": "Safe",
+        },
+        Object {
+          "color": "#800",
+          "id": "ccc",
+          "name": "Heavy",
+        },
+        Object {
+          "color": "#08f",
+          "id": "ddd",
+          "name": "Light",
+        },
+      ]
+    }
+  />
+  <div
+    className="InventoryItems"
+  >
+    <InventoryItem
+      item={
+        Object {
+          "equipRegion": "tire",
+          "id": "b2b2b2",
+          "isEquipped": false,
+          "modifiers": Array [
+            Object {
+              "name": "maxSpeed",
+              "value": 0.4,
+            },
+            Object {
+              "name": "acceleration",
+              "value": 1,
+            },
+            Object {
+              "name": "steering",
+              "value": 1.4,
+            },
+            Object {
+              "name": "breaking",
+              "value": 2,
+            },
+            Object {
+              "name": "grip",
+              "value": 3,
+            },
+            Object {
+              "name": "gravity",
+              "value": 1,
+            },
+          ],
+          "name": "Less tired",
+          "tier": 1,
+          "vendorId": "bbb",
+        }
+      }
+      key="b2b2b2"
+      onSelectItem={[Function]}
+      selectedItem={null}
+      vendors={
+        Array [
+          Object {
+            "color": "#8f0",
+            "id": "aaa",
+            "name": "Super",
+          },
+          Object {
+            "color": "#f80",
+            "id": "bbb",
+            "name": "Safe",
+          },
+          Object {
+            "color": "#800",
+            "id": "ccc",
+            "name": "Heavy",
+          },
+          Object {
+            "color": "#08f",
+            "id": "ddd",
+            "name": "Light",
+          },
+        ]
+      }
+    />
+    <InventoryItem
+      item={
+        Object {
+          "equipRegion": "engine",
+          "id": "c3c3c3",
+          "isEquipped": false,
+          "modifiers": Array [
+            Object {
+              "name": "maxSpeed",
+              "value": 2,
+            },
+            Object {
+              "name": "acceleration",
+              "value": 1.8,
+            },
+            Object {
+              "name": "steering",
+              "value": 1,
+            },
+            Object {
+              "name": "breaking",
+              "value": 1,
+            },
+            Object {
+              "name": "grip",
+              "value": 0.2,
+            },
+            Object {
+              "name": "gravity",
+              "value": 1.5,
+            },
+          ],
+          "name": "Shit engine",
+          "tier": 2,
+          "vendorId": "ccc",
+        }
+      }
+      key="c3c3c3"
+      onSelectItem={[Function]}
+      selectedItem={null}
+      vendors={
+        Array [
+          Object {
+            "color": "#8f0",
+            "id": "aaa",
+            "name": "Super",
+          },
+          Object {
+            "color": "#f80",
+            "id": "bbb",
+            "name": "Safe",
+          },
+          Object {
+            "color": "#800",
+            "id": "ccc",
+            "name": "Heavy",
+          },
+          Object {
+            "color": "#08f",
+            "id": "ddd",
+            "name": "Light",
+          },
+        ]
+      }
+    />
+    <InventoryItem
+      item={
+        Object {
+          "equipRegion": "tire",
+          "id": "d4d4d4",
+          "isEquipped": false,
+          "modifiers": Array [
+            Object {
+              "name": "maxSpeed",
+              "value": 1,
+            },
+            Object {
+              "name": "acceleration",
+              "value": 1,
+            },
+            Object {
+              "name": "steering",
+              "value": 1,
+            },
+            Object {
+              "name": "breaking",
+              "value": 1.1,
+            },
+            Object {
+              "name": "grip",
+              "value": 0.8,
+            },
+            Object {
+              "name": "gravity",
+              "value": 0.9,
+            },
+          ],
+          "name": "Some tire",
+          "tier": 2,
+          "vendorId": "ddd",
+        }
+      }
+      key="d4d4d4"
+      onSelectItem={[Function]}
+      selectedItem={null}
+      vendors={
+        Array [
+          Object {
+            "color": "#8f0",
+            "id": "aaa",
+            "name": "Super",
+          },
+          Object {
+            "color": "#f80",
+            "id": "bbb",
+            "name": "Safe",
+          },
+          Object {
+            "color": "#800",
+            "id": "ccc",
+            "name": "Heavy",
+          },
+          Object {
+            "color": "#08f",
+            "id": "ddd",
+            "name": "Light",
+          },
+        ]
+      }
+    />
+    <InventoryItem
+      item={
+        Object {
+          "equipRegion": "tire",
+          "id": "e5e5e5",
+          "isEquipped": false,
+          "modifiers": Array [
+            Object {
+              "name": "maxSpeed",
+              "value": 1,
+            },
+            Object {
+              "name": "acceleration",
+              "value": 1.2,
+            },
+            Object {
+              "name": "steering",
+              "value": 1.1,
+            },
+            Object {
+              "name": "breaking",
+              "value": 1.2,
+            },
+            Object {
+              "name": "grip",
+              "value": 1.5,
+            },
+            Object {
+              "name": "gravity",
+              "value": 1,
+            },
+          ],
+          "name": "Tire",
+          "tier": 3,
+          "vendorId": "aaa",
+        }
+      }
+      key="e5e5e5"
+      onSelectItem={[Function]}
+      selectedItem={null}
+      vendors={
+        Array [
+          Object {
+            "color": "#8f0",
+            "id": "aaa",
+            "name": "Super",
+          },
+          Object {
+            "color": "#f80",
+            "id": "bbb",
+            "name": "Safe",
+          },
+          Object {
+            "color": "#800",
+            "id": "ccc",
+            "name": "Heavy",
+          },
+          Object {
+            "color": "#08f",
+            "id": "ddd",
+            "name": "Light",
+          },
+        ]
+      }
+    />
+    <InventoryItem
+      item={
+        Object {
+          "equipRegion": "engine",
+          "id": "f6f6f6",
+          "isEquipped": false,
+          "modifiers": Array [
+            Object {
+              "name": "maxSpeed",
+              "value": 1.5,
+            },
+            Object {
+              "name": "acceleration",
+              "value": 3,
+            },
+            Object {
+              "name": "steering",
+              "value": 1,
+            },
+            Object {
+              "name": "breaking",
+              "value": 1,
+            },
+            Object {
+              "name": "grip",
+              "value": 1,
+            },
+            Object {
+              "name": "gravity",
+              "value": 1.5,
+            },
+          ],
+          "name": "Duper engine",
+          "tier": 2,
+          "vendorId": "aaa",
+        }
+      }
+      key="f6f6f6"
+      onSelectItem={[Function]}
+      selectedItem={null}
+      vendors={
+        Array [
+          Object {
+            "color": "#8f0",
+            "id": "aaa",
+            "name": "Super",
+          },
+          Object {
+            "color": "#f80",
+            "id": "bbb",
+            "name": "Safe",
+          },
+          Object {
+            "color": "#800",
+            "id": "ccc",
+            "name": "Heavy",
+          },
+          Object {
+            "color": "#08f",
+            "id": "ddd",
+            "name": "Light",
+          },
+        ]
+      }
+    />
+    <InventoryItem
+      item={
+        Object {
+          "equipRegion": "tire",
+          "id": "f7f7f7",
+          "isEquipped": false,
+          "modifiers": Array [
+            Object {
+              "name": "maxSpeed",
+              "value": 1,
+            },
+            Object {
+              "name": "acceleration",
+              "value": 1.2,
+            },
+            Object {
+              "name": "steering",
+              "value": 1.1,
+            },
+            Object {
+              "name": "breaking",
+              "value": 1.2,
+            },
+            Object {
+              "name": "grip",
+              "value": 1.5,
+            },
+            Object {
+              "name": "gravity",
+              "value": 1,
+            },
+          ],
+          "name": "Tire",
+          "tier": 3,
+          "vendorId": "aaa",
+        }
+      }
+      key="f7f7f7"
+      onSelectItem={[Function]}
+      selectedItem={null}
+      vendors={
+        Array [
+          Object {
+            "color": "#8f0",
+            "id": "aaa",
+            "name": "Super",
+          },
+          Object {
+            "color": "#f80",
+            "id": "bbb",
+            "name": "Safe",
+          },
+          Object {
+            "color": "#800",
+            "id": "ccc",
+            "name": "Heavy",
+          },
+          Object {
+            "color": "#08f",
+            "id": "ddd",
+            "name": "Light",
+          },
+        ]
+      }
+    />
+    <InventoryItem
+      item={
+        Object {
+          "equipRegion": "tire",
+          "id": "g8g8g8",
+          "isEquipped": false,
+          "modifiers": Array [
+            Object {
+              "name": "maxSpeed",
+              "value": 0.4,
+            },
+            Object {
+              "name": "acceleration",
+              "value": 1,
+            },
+            Object {
+              "name": "steering",
+              "value": 1.4,
+            },
+            Object {
+              "name": "breaking",
+              "value": 2,
+            },
+            Object {
+              "name": "grip",
+              "value": 3,
+            },
+            Object {
+              "name": "gravity",
+              "value": 1,
+            },
+          ],
+          "name": "Less tired",
+          "tier": 1,
+          "vendorId": "bbb",
+        }
+      }
+      key="g8g8g8"
+      onSelectItem={[Function]}
+      selectedItem={null}
+      vendors={
+        Array [
+          Object {
+            "color": "#8f0",
+            "id": "aaa",
+            "name": "Super",
+          },
+          Object {
+            "color": "#f80",
+            "id": "bbb",
+            "name": "Safe",
+          },
+          Object {
+            "color": "#800",
+            "id": "ccc",
+            "name": "Heavy",
+          },
+          Object {
+            "color": "#08f",
+            "id": "ddd",
+            "name": "Light",
+          },
+        ]
+      }
+    />
+    <InventoryItem
+      item={
+        Object {
+          "equipRegion": "engine",
+          "id": "h9h9h9",
+          "isEquipped": false,
+          "modifiers": Array [
+            Object {
+              "name": "maxSpeed",
+              "value": 2,
+            },
+            Object {
+              "name": "acceleration",
+              "value": 1.8,
+            },
+            Object {
+              "name": "steering",
+              "value": 1,
+            },
+            Object {
+              "name": "breaking",
+              "value": 1,
+            },
+            Object {
+              "name": "grip",
+              "value": 0.2,
+            },
+            Object {
+              "name": "gravity",
+              "value": 1.5,
+            },
+          ],
+          "name": "Shit engine",
+          "tier": 2,
+          "vendorId": "ccc",
+        }
+      }
+      key="h9h9h9"
+      onSelectItem={[Function]}
+      selectedItem={null}
+      vendors={
+        Array [
+          Object {
+            "color": "#8f0",
+            "id": "aaa",
+            "name": "Super",
+          },
+          Object {
+            "color": "#f80",
+            "id": "bbb",
+            "name": "Safe",
+          },
+          Object {
+            "color": "#800",
+            "id": "ccc",
+            "name": "Heavy",
+          },
+          Object {
+            "color": "#08f",
+            "id": "ddd",
+            "name": "Light",
+          },
+        ]
+      }
+    />
+    <InventoryItem
+      item={
+        Object {
+          "equipRegion": "tire",
+          "id": "i0i0i0",
+          "isEquipped": false,
+          "modifiers": Array [
+            Object {
+              "name": "maxSpeed",
+              "value": 1,
+            },
+            Object {
+              "name": "acceleration",
+              "value": 1,
+            },
+            Object {
+              "name": "steering",
+              "value": 1,
+            },
+            Object {
+              "name": "breaking",
+              "value": 1.1,
+            },
+            Object {
+              "name": "grip",
+              "value": 0.8,
+            },
+            Object {
+              "name": "gravity",
+              "value": 0.9,
+            },
+          ],
+          "name": "Some tire",
+          "tier": 2,
+          "vendorId": "ddd",
+        }
+      }
+      key="i0i0i0"
+      onSelectItem={[Function]}
+      selectedItem={null}
+      vendors={
+        Array [
+          Object {
+            "color": "#8f0",
+            "id": "aaa",
+            "name": "Super",
+          },
+          Object {
+            "color": "#f80",
+            "id": "bbb",
+            "name": "Safe",
+          },
+          Object {
+            "color": "#800",
+            "id": "ccc",
+            "name": "Heavy",
+          },
+          Object {
+            "color": "#08f",
+            "id": "ddd",
+            "name": "Light",
+          },
+        ]
+      }
+    />
+    <InventoryItem
+      item={
+        Object {
+          "equipRegion": "transmission",
+          "id": "j1j1j1",
+          "isEquipped": false,
+          "modifiers": Array [
+            Object {
+              "name": "maxSpeed",
+              "value": 0.7,
+            },
+            Object {
+              "name": "acceleration",
+              "value": 1.5,
+            },
+            Object {
+              "name": "steering",
+              "value": 1,
+            },
+            Object {
+              "name": "breaking",
+              "value": 1,
+            },
+            Object {
+              "name": "grip",
+              "value": 1,
+            },
+            Object {
+              "name": "gravity",
+              "value": 1,
+            },
+          ],
+          "name": "Transmission",
+          "tier": 3,
+          "vendorId": "ccc",
+        }
+      }
+      key="j1j1j1"
+      onSelectItem={[Function]}
+      selectedItem={null}
+      vendors={
+        Array [
+          Object {
+            "color": "#8f0",
+            "id": "aaa",
+            "name": "Super",
+          },
+          Object {
+            "color": "#f80",
+            "id": "bbb",
+            "name": "Safe",
+          },
+          Object {
+            "color": "#800",
+            "id": "ccc",
+            "name": "Heavy",
+          },
+          Object {
+            "color": "#08f",
+            "id": "ddd",
+            "name": "Light",
+          },
+        ]
+      }
+    />
+  </div>
+  <InventoryItemDetails
+    item={null}
+    onEquipItem={[MockFunction]}
+    vendors={
+      Array [
+        Object {
+          "color": "#8f0",
+          "id": "aaa",
+          "name": "Super",
+        },
+        Object {
+          "color": "#f80",
+          "id": "bbb",
+          "name": "Safe",
+        },
+        Object {
+          "color": "#800",
+          "id": "ccc",
+          "name": "Heavy",
+        },
+        Object {
+          "color": "#08f",
+          "id": "ddd",
+          "name": "Light",
+        },
+      ]
+    }
+  />
+</div>
+`;

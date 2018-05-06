@@ -5,7 +5,7 @@
   grid-gap: $grid-gap-small/2;
   grid-template-areas:
     "InventoryItem"
-    "EquippedInventoryItemDetails";
+    "EquippedItemDetails";
   grid-template-columns: 1fr;
   grid-template-rows: 100px 1fr;
 }

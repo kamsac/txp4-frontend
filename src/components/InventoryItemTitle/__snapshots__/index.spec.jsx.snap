@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InventoryItemTitle> 1`] = `
+<div
+  className="InventoryItemTitle"
+>
+  <h1
+    className="InventoryItemTitle-header"
+  >
+    <span
+      style={
+        Object {
+          "color": "#8f0",
+        }
+      }
+    >
+      Super
+    </span>
+     
+    Tire
+     (tier 
+    3
+    )
+  </h1>
+</div>
+`;

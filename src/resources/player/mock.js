@@ -1,4 +1,4 @@
-const ITEMS = [
+export const ITEMS = [
   {
     id: 'a1a1a1',
     name: 'Tire',

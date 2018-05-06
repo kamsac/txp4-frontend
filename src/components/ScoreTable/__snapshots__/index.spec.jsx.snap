@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ScoreTable> 1`] = `
+<table
+  className="ScoreTable"
+>
+  <thead>
+    <tr
+      className="ScoreTable-headerRow"
+    >
+      <th
+        className="ScoreTable-cell ScoreTable-cell--nickname"
+      >
+        Nickname
+      </th>
+      <th
+        className="ScoreTable-cell ScoreTable-cell--points"
+      >
+        Points
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      className="ScoreTable-row"
+      key="lymak"
+    >
+      <td
+        className="ScoreTable-cell ScoreTable-cell--nickname"
+      >
+        lymak
+      </td>
+      <td
+        className="ScoreTable-cell ScoreTable-cell--points"
+      >
+        4242
+      </td>
+    </tr>
+    <tr
+      className="ScoreTable-row"
+      key="kibes"
+    >
+      <td
+        className="ScoreTable-cell ScoreTable-cell--nickname"
+      >
+        kibes
+      </td>
+      <td
+        className="ScoreTable-cell ScoreTable-cell--points"
+      >
+        3232
+      </td>
+    </tr>
+    <tr
+      className="ScoreTable-row"
+      key="tomek"
+    >
+      <td
+        className="ScoreTable-cell ScoreTable-cell--nickname"
+      >
+        tomek
+      </td>
+      <td
+        className="ScoreTable-cell ScoreTable-cell--points"
+      >
+        2416
+      </td>
+    </tr>
+    <tr
+      className="ScoreTable-row"
+      key="omed"
+    >
+      <td
+        className="ScoreTable-cell ScoreTable-cell--nickname"
+      >
+        omed
+      </td>
+      <td
+        className="ScoreTable-cell ScoreTable-cell--points"
+      >
+        2000
+      </td>
+    </tr>
+    <tr
+      className="ScoreTable-row"
+      key="tar"
+    >
+      <td
+        className="ScoreTable-cell ScoreTable-cell--nickname"
+      >
+        tar
+      </td>
+      <td
+        className="ScoreTable-cell ScoreTable-cell--points"
+      >
+        1960
+      </td>
+    </tr>
+    <tr
+      className="ScoreTable-row"
+      key="oiz"
+    >
+      <td
+        className="ScoreTable-cell ScoreTable-cell--nickname"
+      >
+        oiz
+      </td>
+      <td
+        className="ScoreTable-cell ScoreTable-cell--points"
+      >
+        680
+      </td>
+    </tr>
+    <tr
+      className="ScoreTable-row"
+      key="xetrow"
+    >
+      <td
+        className="ScoreTable-cell ScoreTable-cell--nickname"
+      >
+        xetrow
+      </td>
+      <td
+        className="ScoreTable-cell ScoreTable-cell--points"
+      >
+        403
+      </td>
+    </tr>
+    <tr
+      className="ScoreTable-row"
+      key="ginok"
+    >
+      <td
+        className="ScoreTable-cell ScoreTable-cell--nickname"
+      >
+        ginok
+      </td>
+      <td
+        className="ScoreTable-cell ScoreTable-cell--points"
+      >
+        30
+      </td>
+    </tr>
+    <tr
+      className="ScoreTable-row"
+      key="llif"
+    >
+      <td
+        className="ScoreTable-cell ScoreTable-cell--nickname"
+      >
+        llif
+      </td>
+      <td
+        className="ScoreTable-cell ScoreTable-cell--points"
+      >
+        20
+      </td>
+    </tr>
+    <tr
+      className="ScoreTable-row"
+      key="ida"
+    >
+      <td
+        className="ScoreTable-cell ScoreTable-cell--nickname"
+      >
+        ida
+      </td>
+      <td
+        className="ScoreTable-cell ScoreTable-cell--points"
+      >
+        10
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

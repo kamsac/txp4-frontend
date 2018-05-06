@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InventoryItem> with item 1`] = `
+<div
+  className="InventoryItem InventoryItem--tire"
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role="button"
+  style={
+    Object {
+      "boxShadow": "inset 0 -4px 0 0 #8f0",
+    }
+  }
+  tabIndex={0}
+/>
+`;
+
+exports[`<InventoryItem> with no item 1`] = `
+<div
+  className="InventoryItem"
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role="button"
+  style={Object {}}
+  tabIndex={0}
+/>
+`;

@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Navbar> 1`] = `
+<div
+  className="Navbar"
+>
+  <h1
+    className="AppTitle"
+  >
+    TXP4
+  </h1>
+  <ul
+    className="Navigation"
+  >
+    <li
+      className="NavigationItem"
+      key="Inventory"
+    >
+      <Link
+        className="NavigationItem__anchor"
+        replace={false}
+        to="/inventory"
+      >
+        Inventory
+      </Link>
+    </li>
+    <li
+      className="NavigationItem"
+      key="Scores"
+    >
+      <Link
+        className="NavigationItem__anchor"
+        replace={false}
+        to="/scores"
+      >
+        Scores
+      </Link>
+    </li>
+  </ul>
+</div>
+`;

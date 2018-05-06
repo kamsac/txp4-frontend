@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InventoryItemModifiers> 1`] = `
+<ul
+  className="InventoryItemModifiers"
+>
+  <li
+    className="InventoryItemModifiers-modifier InventoryItemModifiers-modifier--positive"
+    key="grip"
+  >
+    150% of grip
+  </li>
+  <li
+    className="InventoryItemModifiers-modifier InventoryItemModifiers-modifier--positive"
+    key="acceleration"
+  >
+    120% of acceleration
+  </li>
+  <li
+    className="InventoryItemModifiers-modifier InventoryItemModifiers-modifier--positive"
+    key="breaking"
+  >
+    120% of breaking
+  </li>
+  <li
+    className="InventoryItemModifiers-modifier InventoryItemModifiers-modifier--positive"
+    key="steering"
+  >
+    110% of steering
+  </li>
+</ul>
+`;

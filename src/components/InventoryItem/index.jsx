@@ -6,14 +6,20 @@ import { ItemPropTypesShape, VendorPropTypesShape } from '../../prop-types';
 export default class InventoryItem extends React.Component {
   render() {
     const { item } = this.props;
-    const vendor =
-      this.props.vendors.find(iteratedVendor => iteratedVendor.id === this.props.item.vendorId);
+
+    const vendor = item ?
+      this.props.vendors.find(iteratedVendor => iteratedVendor.id === this.props.item.vendorId)
+      :
+      null;
 
     let className = 'InventoryItem';
-    const imageClassName = `InventoryItem--${item.equipRegion}`;
-    className += ` ${imageClassName}`;
-    if (item === this.props.selectedItem) {
-      className += ' InventoryItem--selected';
+    if (item) {
+      const imageClassName = `InventoryItem--${item.equipRegion}`;
+      className += ` ${imageClassName}`;
+
+      if (item === this.props.selectedItem) {
+        className += ' InventoryItem--selected';
+      }
     }
 
     const styles = {};

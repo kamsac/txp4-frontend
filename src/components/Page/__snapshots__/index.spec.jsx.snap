@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Page> 1`] = `
+<div
+  className="Page"
+>
+  <Navbar />
+  <div
+    className="PageContent"
+  >
+    <div>
+      Something
+    </div>
+  </div>
+</div>
+`;
