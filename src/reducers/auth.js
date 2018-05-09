@@ -13,7 +13,9 @@ export default function authReducer(
     isFetching: false,
     jwtDecoded: getDefaultJwtDecoded(),
   },
-  action,
+  action = {
+    type: 'nothing',
+  },
 ) {
   switch (action.type) {
     case LOGIN_REQUEST:

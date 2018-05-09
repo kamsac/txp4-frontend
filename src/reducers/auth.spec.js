@@ -6,6 +6,14 @@ import {
 } from '../actions/auth';
 import { ACCESS_TOKEN } from '../resources/auth/mock';
 
+test('authReducer should load jwt from WebStore', () => {
+  localStorage.__STORE__['accessToken'] = ACCESS_TOKEN; // eslint-disable-line
+
+  const state = authReducer();
+
+  expect(state.jwtDecoded).toEqual(jwtDecode(ACCESS_TOKEN));
+});
+
 test(`${LOGIN_REQUEST}`, () => {
   const previousState = {
     isFetching: false,
