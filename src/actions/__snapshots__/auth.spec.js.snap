@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`auth action creators loginError 1`] = `
+Object {
+  "payload": Object {
+    "isFetching": false,
+    "jwtDecoded": null,
+  },
+  "type": "LOGIN_FAILURE",
+}
+`;
+
+exports[`auth action creators receiveLogin 1`] = `
+Object {
+  "payload": Object {
+    "isFetching": false,
+    "jwtDecoded": Object {
+      "iat": 1516239022,
+      "login": "lymak",
+      "nick": "$s$o$a60l$c82y$fa3m$c82a$a60k",
+      "sub": "1234567890",
+    },
+  },
+  "type": "LOGIN_SUCCESS",
+}
+`;
+
+exports[`auth action creators receiveLogout 1`] = `
+Object {
+  "payload": Object {
+    "jwtDecoded": null,
+  },
+  "type": "LOGOUT_SUCCESS",
+}
+`;
+
+exports[`auth action creators requestLogin 1`] = `
+Object {
+  "payload": Object {
+    "isFetching": true,
+  },
+  "type": "LOGIN_REQUEST",
+}
+`;
+
+exports[`auth action creators requestLogout 1`] = `
+Object {
+  "payload": Object {},
+  "type": "LOGOUT_REQUEST",
+}
+`;
