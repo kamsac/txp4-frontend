@@ -1,7 +1,13 @@
 @import '../../variables';
 
 .Navbar {
+  border-bottom: $border-width solid $black;
+}
+
+.Navbar__ContentMargin {
   align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
   display: grid;
   grid-area: Navbar;
   grid-gap: $grid-gap-large;

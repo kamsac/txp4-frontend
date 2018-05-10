@@ -4,38 +4,42 @@ exports[`<Navbar> 1`] = `
 <div
   className="Navbar"
 >
-  <h1
-    className="AppTitle"
+  <div
+    className="Navbar__ContentMargin"
   >
-    TXP4
-  </h1>
-  <ul
-    className="Navigation"
-  >
-    <li
-      className="NavigationItem"
-      key="Inventory"
+    <h1
+      className="AppTitle"
     >
-      <Link
-        className="NavigationItem__anchor"
-        replace={false}
-        to="/inventory"
-      >
-        Inventory
-      </Link>
-    </li>
-    <li
-      className="NavigationItem"
-      key="Scores"
+      TXP4
+    </h1>
+    <ul
+      className="Navigation"
     >
-      <Link
-        className="NavigationItem__anchor"
-        replace={false}
-        to="/scores"
+      <li
+        className="NavigationItem"
+        key="Inventory"
       >
-        Scores
-      </Link>
-    </li>
-  </ul>
+        <Link
+          className="NavigationItem__anchor"
+          replace={false}
+          to="/inventory"
+        >
+          Inventory
+        </Link>
+      </li>
+      <li
+        className="NavigationItem"
+        key="Scores"
+      >
+        <Link
+          className="NavigationItem__anchor"
+          replace={false}
+          to="/scores"
+        >
+          Scores
+        </Link>
+      </li>
+    </ul>
+  </div>
 </div>
 `;

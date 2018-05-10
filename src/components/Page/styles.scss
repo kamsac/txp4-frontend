@@ -1,5 +1,15 @@
 @import '../../variables';
 
+.Page {
+  margin: 0 auto;
+  display: grid;
+  grid-gap: $grid-gap-medium;
+  grid-template-areas: "Navbar" "PageContent";
+}
+
 .PageContent {
   grid-area: PageContent;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
 }

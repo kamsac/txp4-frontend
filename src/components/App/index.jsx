@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import './styles.scss';
 import InventoryPage from '../InventoryPage/index';
 import ScoresPage from '../ScoresPage/index';
 

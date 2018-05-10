@@ -1,9 +1,0 @@
-@import '../../variables';
-
-.App {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: grid;
-  grid-gap: $grid-gap-large;
-  grid-template-areas: "Navbar" "PageContent";
-}

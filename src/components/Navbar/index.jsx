@@ -29,10 +29,12 @@ export default class Navbar extends React.Component {
 
     return (
       <div className="Navbar">
-        <h1 className="AppTitle">TXP4</h1>
-        <ul className="Navigation">
-          {navigationItems}
-        </ul>
+        <div className="Navbar__ContentMargin">
+          <h1 className="AppTitle">TXP4</h1>
+          <ul className="Navigation">
+            {navigationItems}
+          </ul>
+        </div>
       </div>
     );
   }
