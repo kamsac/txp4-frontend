@@ -44,7 +44,7 @@ export default function authReducer(
   }
 }
 
-export function getIsUserLogged(state) {
+export function getIsUserAuthenticated(state) {
   return !!state.auth.jwtDecoded && !!state.auth.jwtDecoded.login;
 }
 

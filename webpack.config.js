@@ -11,6 +11,7 @@ module.exports = {
     './src/entry.jsx',
   ],
   output: {
+    publicPath: '/',
     path: path.resolve(__dirname, 'build'),
     filename: 'app.js',
   },

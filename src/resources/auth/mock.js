@@ -8,7 +8,7 @@ const AuthResourceMock = {
           token: ACCESS_TOKEN,
         },
       };
-      setTimeout(() => resolve(response), 100);
+      setTimeout(() => resolve(response), 1000);
     });
   },
 };

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import InventoryPage from '../InventoryPage/index';
 import ScoresPage from '../ScoresPage/index';
+import LoginPage from '../LoginPage';
 
 export default class App extends Component {
   render() {
@@ -10,6 +11,16 @@ export default class App extends Component {
         <div className="App">
           <Route exact path="/inventory" component={InventoryPage} />
           <Route exact path="/scores" component={ScoresPage} />
+          <Route
+            exact
+            path="/auth/:magicLinkToken"
+            component={(props) => {
+              const { magicLinkToken } = props.match.params;
+              return (
+                <LoginPage magicLinkToken={magicLinkToken} />
+              );
+            }}
+          />
         </div>
       </BrowserRouter>
     );
