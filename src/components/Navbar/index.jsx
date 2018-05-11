@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import dotenvConfiguration from '../../dotenv-configuration';
 import './styles.scss';
+import trackmaniaStyleParser from '../../trackmania-style-parser';
 
 export default class Navbar extends React.Component {
   constructor(props) {
@@ -57,10 +58,19 @@ export default class Navbar extends React.Component {
                     Logout
                   </div>
                 </li>
+                <li className="NavigationItem">
+                  <Link
+                    to={`/player/${this.props.userLogin}`}
+                    className="NavigationItem__anchor"
+                  >
+                    <span
+                      dangerouslySetInnerHTML={{
+                      __html: trackmaniaStyleParser(this.props.userNick),
+                      }}
+                    />
+                  </Link>
+                </li>
               </ul>
-              <Link to={`/player/${this.props.userLogin}`} className="LoggedUser__nick">
-                { this.props.userNick }
-              </Link>
             </div>
           }
         </div>

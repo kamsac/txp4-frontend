@@ -32,6 +32,7 @@
         "specialLink": [ "to" ]
       }
     ],
-    "import/no-extraneous-dependencies": false
+    "import/no-extraneous-dependencies": false,
+    "react/no-danger": false
   }
 }
