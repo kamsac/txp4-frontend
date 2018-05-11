@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './styles.scss';
-import Navbar from '../Navbar/index';
+import NavbarContainer from '../../containers/NavbarContainer';
 
 export default class Page extends React.Component {
   render() {
     return (
       <div className="Page">
-        <Navbar />
+        <NavbarContainer />
         <div className="PageContent">
           {this.props.children}
         </div>

@@ -375,7 +375,7 @@ export const ITEMS = [
   },
 ];
 
-const PLAYER = {
+export const PLAYER = {
   login: 'lymak',
   nick: '$s$o$a60l$c82y$fa3m$c82a$a60k',
   inventory: {

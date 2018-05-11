@@ -11,8 +11,8 @@
   display: grid;
   grid-area: Navbar;
   grid-gap: $grid-gap-large;
-  grid-template-areas: "AppTitle Navigation";
-  grid-template-columns: auto 1fr;
+  grid-template-areas: "AppTitle Navigation LoggedUser";
+  grid-template-columns: auto 1fr auto;
 }
 
 .AppTitle {
@@ -32,6 +32,10 @@
   margin: 0;
 }
 
+.Navigation--LoggedUser {
+  grid-area: unset;
+}
+
 .NavigationItem {
   align-items: stretch;
   display: grid;
@@ -43,4 +47,23 @@
   display: grid;
   justify-items: center;
   text-decoration: none;
+  cursor: pointer;
+  color: $link-color;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+.LoggedUser {
+  align-items: center;
+  display: grid;
+  grid-area: LoggedUser;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(100px, max-content);
+  grid-gap: $grid-gap-small;
+}
+
+.LoggedUser__nick {
+
 }

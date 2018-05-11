@@ -4,7 +4,7 @@ exports[`<Page> 1`] = `
 <div
   className="Page"
 >
-  <Navbar />
+  <Connect(Navbar) />
   <div
     className="PageContent"
   >
