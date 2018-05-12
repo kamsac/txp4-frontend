@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack",
+    "build": "webpack -p",
+    "build:dev": "webpack -d",
     "test": "jest --verbose",
     "test:watch": "jest --watch",
     "test:update": "jest --updateSnapshot",

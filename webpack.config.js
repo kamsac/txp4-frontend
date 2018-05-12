@@ -3,7 +3,12 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
-module.exports = {
+const dotenvPlugin = new Dotenv();
+const htmlWebpackPlugin = new HtmlWebpackPlugin({
+  template: 'src/index.html',
+});
+
+const config = {
   entry: [
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:9000',
@@ -61,12 +66,10 @@ module.exports = {
     ],
   },
   plugins: [
-    new Dotenv(),
+    dotenvPlugin,
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
-    new HtmlWebpackPlugin({
-      template: 'src/index.html',
-    }),
+    htmlWebpackPlugin,
   ],
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
@@ -80,3 +83,14 @@ module.exports = {
     hot: true,
   },
 };
+
+if (process.env.NODE_ENV === 'production') {
+  config.entry = './src/entry.jsx';
+  config.devtool = false;
+  config.plugins = [
+    dotenvPlugin,
+    htmlWebpackPlugin,
+  ];
+}
+
+module.exports = config;
