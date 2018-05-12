@@ -6,15 +6,15 @@ exports[`<ScoreTable> 1`] = `
 >
   <thead>
     <tr
-      className="ScoreTable-headerRow"
+      className="ScoreTable-HeaderRow"
     >
       <th
-        className="ScoreTable-cell ScoreTable-cell--nickname"
+        className="ScoreTable-HeaderCell ScoreTable-Cell--Nickname"
       >
         Nickname
       </th>
       <th
-        className="ScoreTable-cell ScoreTable-cell--points"
+        className="ScoreTable-HeaderCell ScoreTable-Cell--Points"
       >
         Points
       </th>
@@ -22,153 +22,303 @@ exports[`<ScoreTable> 1`] = `
   </thead>
   <tbody>
     <tr
-      className="ScoreTable-row"
+      className="ScoreTable-Row"
       key="lymak"
     >
       <td
-        className="ScoreTable-cell ScoreTable-cell--nickname"
+        className="ScoreTable-Cell ScoreTable-Cell--Nickname"
       >
-        lymak
+        <Link
+          className="ScoreTable-Cell-Anchor"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<span style=\\"font-weight:bold;color:#a60;text-shadow:1px 1px 1px rgba(0, 0, 0, 0.5);\\">l</span><span style=\\"font-weight:bold;color:#c82;text-shadow:1px 1px 1px rgba(0, 0, 0, 0.5);\\">y</span><span style=\\"font-weight:bold;color:#fa3;text-shadow:1px 1px 1px rgba(0, 0, 0, 0.5);\\">m</span><span style=\\"font-weight:bold;color:#c82;text-shadow:1px 1px 1px rgba(0, 0, 0, 0.5);\\">a</span><span style=\\"font-weight:bold;color:#a60;text-shadow:1px 1px 1px rgba(0, 0, 0, 0.5);\\">k</span>",
+            }
+          }
+          replace={false}
+          to="/player/lymak"
+        />
       </td>
       <td
-        className="ScoreTable-cell ScoreTable-cell--points"
+        className="ScoreTable-Cell ScoreTable-Cell--Points"
       >
-        4242
+        <Link
+          className="ScoreTable-Cell-Anchor"
+          replace={false}
+          to="/player/lymak"
+        >
+          4242
+        </Link>
       </td>
     </tr>
     <tr
-      className="ScoreTable-row"
+      className="ScoreTable-Row"
       key="kibes"
     >
       <td
-        className="ScoreTable-cell ScoreTable-cell--nickname"
+        className="ScoreTable-Cell ScoreTable-Cell--Nickname"
       >
-        kibes
+        <Link
+          className="ScoreTable-Cell-Anchor"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<span style=\\"color:#fff;text-shadow:1px 1px 1px rgba(0, 0, 0, 0.5);letter-spacing:.1em;font-size:105%;\\">kibes</span>",
+            }
+          }
+          replace={false}
+          to="/player/kibes"
+        />
       </td>
       <td
-        className="ScoreTable-cell ScoreTable-cell--points"
+        className="ScoreTable-Cell ScoreTable-Cell--Points"
       >
-        3232
+        <Link
+          className="ScoreTable-Cell-Anchor"
+          replace={false}
+          to="/player/kibes"
+        >
+          3232
+        </Link>
       </td>
     </tr>
     <tr
-      className="ScoreTable-row"
+      className="ScoreTable-Row"
       key="tomek"
     >
       <td
-        className="ScoreTable-cell ScoreTable-cell--nickname"
+        className="ScoreTable-Cell ScoreTable-Cell--Nickname"
       >
-        tomek
+        <Link
+          className="ScoreTable-Cell-Anchor"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<span style=\\"font-weight:bold;color:#08f;text-shadow:1px 1px 1px rgba(0, 0, 0, 0.5);letter-spacing:.1em;font-size:105%;\\">tom</span><span style=\\"font-weight:bold;color:#fff;text-shadow:1px 1px 1px rgba(0, 0, 0, 0.5);letter-spacing:.1em;font-size:105%;\\">ek</span>",
+            }
+          }
+          replace={false}
+          to="/player/tomek"
+        />
       </td>
       <td
-        className="ScoreTable-cell ScoreTable-cell--points"
+        className="ScoreTable-Cell ScoreTable-Cell--Points"
       >
-        2416
+        <Link
+          className="ScoreTable-Cell-Anchor"
+          replace={false}
+          to="/player/tomek"
+        >
+          2416
+        </Link>
       </td>
     </tr>
     <tr
-      className="ScoreTable-row"
+      className="ScoreTable-Row"
       key="omed"
     >
       <td
-        className="ScoreTable-cell ScoreTable-cell--nickname"
+        className="ScoreTable-Cell ScoreTable-Cell--Nickname"
       >
-        omed
+        <Link
+          className="ScoreTable-Cell-Anchor"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<span style=\\"color:#f80;\\">omed</span>",
+            }
+          }
+          replace={false}
+          to="/player/omed"
+        />
       </td>
       <td
-        className="ScoreTable-cell ScoreTable-cell--points"
+        className="ScoreTable-Cell ScoreTable-Cell--Points"
       >
-        2000
+        <Link
+          className="ScoreTable-Cell-Anchor"
+          replace={false}
+          to="/player/omed"
+        >
+          2000
+        </Link>
       </td>
     </tr>
     <tr
-      className="ScoreTable-row"
+      className="ScoreTable-Row"
       key="tar"
     >
       <td
-        className="ScoreTable-cell ScoreTable-cell--nickname"
+        className="ScoreTable-Cell ScoreTable-Cell--Nickname"
       >
-        tar
+        <Link
+          className="ScoreTable-Cell-Anchor"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<span style=\\"color:#f00;\\">tar</span>",
+            }
+          }
+          replace={false}
+          to="/player/tar"
+        />
       </td>
       <td
-        className="ScoreTable-cell ScoreTable-cell--points"
+        className="ScoreTable-Cell ScoreTable-Cell--Points"
       >
-        1960
+        <Link
+          className="ScoreTable-Cell-Anchor"
+          replace={false}
+          to="/player/tar"
+        >
+          1960
+        </Link>
       </td>
     </tr>
     <tr
-      className="ScoreTable-row"
+      className="ScoreTable-Row"
       key="oiz"
     >
       <td
-        className="ScoreTable-cell ScoreTable-cell--nickname"
+        className="ScoreTable-Cell ScoreTable-Cell--Nickname"
       >
-        oiz
+        <Link
+          className="ScoreTable-Cell-Anchor"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<span style=\\"font-weight:bold;color:#000;letter-spacing:.1em;font-size:105%;\\">oiz</span>",
+            }
+          }
+          replace={false}
+          to="/player/oiz"
+        />
       </td>
       <td
-        className="ScoreTable-cell ScoreTable-cell--points"
+        className="ScoreTable-Cell ScoreTable-Cell--Points"
       >
-        680
+        <Link
+          className="ScoreTable-Cell-Anchor"
+          replace={false}
+          to="/player/oiz"
+        >
+          680
+        </Link>
       </td>
     </tr>
     <tr
-      className="ScoreTable-row"
+      className="ScoreTable-Row"
       key="xetrow"
     >
       <td
-        className="ScoreTable-cell ScoreTable-cell--nickname"
+        className="ScoreTable-Cell ScoreTable-Cell--Nickname"
       >
-        xetrow
+        <Link
+          className="ScoreTable-Cell-Anchor"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<span style=\\"color:#484;letter-spacing:.1em;font-size:105%;\\">xetrow</span>",
+            }
+          }
+          replace={false}
+          to="/player/xetrow"
+        />
       </td>
       <td
-        className="ScoreTable-cell ScoreTable-cell--points"
+        className="ScoreTable-Cell ScoreTable-Cell--Points"
       >
-        403
+        <Link
+          className="ScoreTable-Cell-Anchor"
+          replace={false}
+          to="/player/xetrow"
+        >
+          403
+        </Link>
       </td>
     </tr>
     <tr
-      className="ScoreTable-row"
+      className="ScoreTable-Row"
       key="ginok"
     >
       <td
-        className="ScoreTable-cell ScoreTable-cell--nickname"
+        className="ScoreTable-Cell ScoreTable-Cell--Nickname"
       >
-        ginok
+        <Link
+          className="ScoreTable-Cell-Anchor"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<span style=\\"color:#880;letter-spacing:-.1em;font-size:95%;\\">ginok</span>",
+            }
+          }
+          replace={false}
+          to="/player/ginok"
+        />
       </td>
       <td
-        className="ScoreTable-cell ScoreTable-cell--points"
+        className="ScoreTable-Cell ScoreTable-Cell--Points"
       >
-        30
+        <Link
+          className="ScoreTable-Cell-Anchor"
+          replace={false}
+          to="/player/ginok"
+        >
+          30
+        </Link>
       </td>
     </tr>
     <tr
-      className="ScoreTable-row"
+      className="ScoreTable-Row"
       key="llif"
     >
       <td
-        className="ScoreTable-cell ScoreTable-cell--nickname"
+        className="ScoreTable-Cell ScoreTable-Cell--Nickname"
       >
-        llif
+        <Link
+          className="ScoreTable-Cell-Anchor"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<span style=\\"color:#400;letter-spacing:.1em;font-size:105%;\\">llif</span>",
+            }
+          }
+          replace={false}
+          to="/player/llif"
+        />
       </td>
       <td
-        className="ScoreTable-cell ScoreTable-cell--points"
+        className="ScoreTable-Cell ScoreTable-Cell--Points"
       >
-        20
+        <Link
+          className="ScoreTable-Cell-Anchor"
+          replace={false}
+          to="/player/llif"
+        >
+          20
+        </Link>
       </td>
     </tr>
     <tr
-      className="ScoreTable-row"
+      className="ScoreTable-Row"
       key="ida"
     >
       <td
-        className="ScoreTable-cell ScoreTable-cell--nickname"
+        className="ScoreTable-Cell ScoreTable-Cell--Nickname"
       >
-        ida
+        <Link
+          className="ScoreTable-Cell-Anchor"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<span style=\\"color:#f00;\\">ida</span>",
+            }
+          }
+          replace={false}
+          to="/player/ida"
+        />
       </td>
       <td
-        className="ScoreTable-cell ScoreTable-cell--points"
+        className="ScoreTable-Cell ScoreTable-Cell--Points"
       >
-        10
+        <Link
+          className="ScoreTable-Cell-Anchor"
+          replace={false}
+          to="/player/ida"
+        >
+          10
+        </Link>
       </td>
     </tr>
   </tbody>

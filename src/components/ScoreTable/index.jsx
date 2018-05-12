@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import './styles.scss';
 import { ScorePropTypesShape } from '../../prop-types';
+import trackmaniaStyleParser from '../../trackmania-style-parser';
 
 export default class ScoreTable extends React.Component {
   componentDidMount() {
@@ -12,18 +14,34 @@ export default class ScoreTable extends React.Component {
     const scoreTableRows = this.props.scores
       .slice(0, this.props.rowsLimit)
       .map(score => (
-        <tr className="ScoreTable-row" key={score.player.login}>
-          <td className="ScoreTable-cell ScoreTable-cell--nickname">{score.player.nick}</td>
-          <td className="ScoreTable-cell ScoreTable-cell--points">{score.score}</td>
+        <tr className="ScoreTable-Row" key={score.player.login}>
+          <td className="ScoreTable-Cell ScoreTable-Cell--Nickname">
+            <Link
+              to={`/player/${score.player.login}`}
+              className="ScoreTable-Cell-Anchor"
+              dangerouslySetInnerHTML={{
+                __html: trackmaniaStyleParser(score.player.nick),
+              }}
+            />
+          </td>
+          <td className="ScoreTable-Cell ScoreTable-Cell--Points">
+            <Link
+              to={`/player/${score.player.login}`}
+              className="ScoreTable-Cell-Anchor"
+            >
+              {score.score}
+            </Link>
+
+          </td>
         </tr>
       ));
 
     return (
       <table className="ScoreTable">
         <thead>
-          <tr className="ScoreTable-headerRow">
-            <th className="ScoreTable-cell ScoreTable-cell--nickname">Nickname</th>
-            <th className="ScoreTable-cell ScoreTable-cell--points">Points</th>
+          <tr className="ScoreTable-HeaderRow">
+            <th className="ScoreTable-HeaderCell ScoreTable-Cell--Nickname">Nickname</th>
+            <th className="ScoreTable-HeaderCell ScoreTable-Cell--Points">Points</th>
           </tr>
         </thead>
         <tbody>

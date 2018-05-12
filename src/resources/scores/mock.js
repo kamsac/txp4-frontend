@@ -2,70 +2,70 @@ export const SCORES = [
   {
     player: {
       login: 'lymak',
-      nick: 'lymak',
+      nick: '$s$o$a60l$c82y$fa3m$c82a$a60k',
     },
     score: 4242,
   },
   {
     player: {
       login: 'kibes',
-      nick: 'kibes',
+      nick: '$s$w$fffkibes',
     },
     score: 3232,
   },
   {
     player: {
       login: 'tomek',
-      nick: 'tomek',
+      nick: '$w$o$s$08ftom$fffek',
     },
     score: 2416,
   },
   {
     player: {
       login: 'omed',
-      nick: 'omed',
+      nick: '$f80omed',
     },
     score: 2000,
   },
   {
     player: {
       login: 'tar',
-      nick: 'tar',
+      nick: '$f00tar',
     },
     score: 1960,
   },
   {
     player: {
       login: 'oiz',
-      nick: 'oiz',
+      nick: '$o$w$000oiz',
     },
     score: 680,
   },
   {
     player: {
       login: 'xetrow',
-      nick: 'xetrow',
+      nick: '$w$484xetrow',
     },
     score: 403,
   },
   {
     player: {
       login: 'ginok',
-      nick: 'ginok',
+      nick: '$n$880ginok',
     },
     score: 30,
   },
   {
     player: {
       login: 'llif',
-      nick: 'llif',
+      nick: '$400$wllif',
     },
     score: 20,
   },
   {
     player: {
       login: 'ida',
-      nick: 'ida',
+      nick: '$f00ida',
     },
     score: 10,
   },

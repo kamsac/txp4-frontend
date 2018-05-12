@@ -6,21 +6,21 @@ test(`${RECEIVE_SCORES}`, () => {
     {
       player: {
         login: 'lymak',
-        nickname: 'lymak',
+        nick: 'lymak',
       },
       points: 4242,
     },
     {
       player: {
         login: 'kibes',
-        nickname: 'kibes',
+        nick: 'kibes',
       },
       points: 3232,
     },
     {
       player: {
         login: 'tomek',
-        nickname: 'tomek',
+        nick: 'tomek',
       },
       points: 2416,
     },

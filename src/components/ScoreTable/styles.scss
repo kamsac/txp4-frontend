@@ -1,5 +1,10 @@
 @import '../../variables';
 
+$score-table-cell-padding-x: 1rem;
+$score-table-cell-padding-y: 0.6rem;
+$score-table-header-padding-x: $score-table-cell-padding-x;
+$score-table-header-padding-y: 1rem;
+
 .ScoreTable {
   border: $border-width solid #000;
   border-collapse: collapse;
@@ -7,20 +12,38 @@
   width: 100%;
 }
 
-.ScoreTable-headerRow {
+.ScoreTable-HeaderRow {
   background-color: $black;
   color: $white;
-  padding: 2rem;
 }
 
-.ScoreTable-cell {
-  padding: 0.5rem;
+.ScoreTable-Row {
+  &:hover {
+    background-color: transparentize($primary-color, 0.8);
+  }
 }
 
-.ScoreTable-cell--nickname {
+.ScoreTable-HeaderCell {
+  padding: $score-table-header-padding-y $score-table-header-padding-x;
+}
+
+.ScoreTable-Cell {
+  padding: 0;
+}
+
+.ScoreTable-Cell--Nickname {
+  text-decoration: none;
   text-align: left;
 }
 
-.ScoreTable-cell--points {
+.ScoreTable-Cell--Points {
+  text-decoration: none;
   text-align: right;
+}
+
+.ScoreTable-Cell-Anchor {
+  color: unset;
+  text-decoration: none;
+  display: block;
+  padding: $score-table-cell-padding-y $score-table-cell-padding-x;
 }
