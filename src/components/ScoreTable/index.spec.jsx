@@ -6,7 +6,7 @@ import { SCORES } from '../../resources/scores/mock';
 test('<ScoreTable>', () => {
   const component = shallow(<ScoreTable
     scores={SCORES}
-    requestScores={jest.fn}
+    loadScores={jest.fn}
   />);
   expect(component).toMatchSnapshot();
 });
@@ -16,7 +16,7 @@ test('should display specified numbers of rows', () => {
   const component = shallow(<ScoreTable
     rowsLimit={rowsLimit}
     scores={SCORES}
-    requestScores={jest.fn}
+    loadScores={jest.fn}
   />);
   const rows = component.find('tbody tr');
   expect(rows.length).toEqual(rowsLimit);

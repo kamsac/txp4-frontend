@@ -7,7 +7,7 @@ import trackmaniaStyleParser from '../../trackmania-style-parser';
 
 export default class ScoreTable extends React.Component {
   componentDidMount() {
-    this.props.requestScores();
+    this.props.loadScores();
   }
 
   render() {
@@ -55,7 +55,7 @@ export default class ScoreTable extends React.Component {
 ScoreTable.propTypes = {
   scores: PropTypes.arrayOf(ScorePropTypesShape).isRequired,
   rowsLimit: PropTypes.number,
-  requestScores: PropTypes.func.isRequired,
+  loadScores: PropTypes.func.isRequired,
 };
 
 ScoreTable.defaultProps = {

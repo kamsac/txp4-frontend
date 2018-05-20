@@ -3,6 +3,7 @@
 exports[`receiveScores 1`] = `
 Object {
   "payload": Object {
+    "isFetching": false,
     "scores": Array [
       Object {
         "player": Object {
@@ -76,6 +77,24 @@ Object {
       },
     ],
   },
-  "type": "scores:fetchScoresSuccess",
+  "type": "SCORES_SUCCESS",
+}
+`;
+
+exports[`requestScores 1`] = `
+Object {
+  "payload": Object {
+    "isFetching": true,
+  },
+  "type": "SCORES_REQUEST",
+}
+`;
+
+exports[`scoresError() 1`] = `
+Object {
+  "payload": Object {
+    "isFetching": false,
+  },
+  "type": "SCORES_FAILURE",
 }
 `;

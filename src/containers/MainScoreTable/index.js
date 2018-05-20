@@ -1,13 +1,14 @@
 import { connect } from 'react-redux';
 import ScoreTable from '../../components/ScoreTable/index';
-import { requestScores } from '../../actions/scores';
+import { loadScores } from '../../actions/scores';
+import { getScores } from '../../reducers/scores';
 
 const mapStateToProps = state => ({
-  scores: state.scores,
+  scores: getScores(state),
 });
 
 const mapDispatchToProps = dispatch => ({
-  requestScores: () => dispatch(requestScores()),
+  loadScores: () => dispatch(loadScores()),
 });
 
 const MainScoreTable = connect(

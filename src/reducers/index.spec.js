@@ -7,7 +7,10 @@ test('@@INIT', () => {
       isFetching: false,
       jwtDecoded: null,
     },
-    scores: [],
+    scores: {
+      isFetching: false,
+      items: [],
+    },
     players: {
       isFetching: false,
       items: {},
