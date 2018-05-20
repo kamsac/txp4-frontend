@@ -1072,6 +1072,7 @@ exports[`<Inventory> 1`] = `
   <InventoryItemDetails
     item={null}
     onEquipItem={[MockFunction]}
+    showControls={true}
     vendors={
       Array [
         Object {

@@ -59,6 +59,7 @@ export default class Inventory extends React.Component {
           item={this.state.selectedItem}
           onEquipItem={this.props.onEquipItem}
           vendors={this.props.vendors}
+          showControls={this.props.isUserOwner}
         />
       </div>
     );
@@ -72,6 +73,7 @@ Inventory.propTypes = {
   requestVendors: PropTypes.func.isRequired,
   equipRegions: PropTypes.arrayOf(PropTypes.string).isRequired,
   onEquipItem: PropTypes.func.isRequired,
+  isUserOwner: PropTypes.bool.isRequired,
 };
 
 Inventory.defaultProps = {

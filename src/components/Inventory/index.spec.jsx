@@ -12,6 +12,7 @@ test('<Inventory>', () => {
     requestVendors={jest.fn()}
     equipRegions={['tire', 'engine', 'transmission']}
     onEquipItem={jest.fn()}
+    isUserOwner
   />);
   expect(component).toMatchSnapshot();
 });

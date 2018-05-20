@@ -7,15 +7,16 @@ import { ItemPropTypesShape, VendorPropTypesShape } from '../../prop-types';
 
 export default class InventoryItemDetails extends React.Component {
   render() {
-    const { item } = this.props;
+    const { item, showControls } = this.props;
 
     if (item) {
       return (
         <div className="InventoryItemDetails">
           <InventoryItemTitle item={item} vendors={this.props.vendors} />
           <InventoryItemModifiers item={item} />
-
-          <button onClick={() => this.props.onEquipItem(item)}>Equip this item</button>
+          {showControls &&
+            <button onClick={() => this.props.onEquipItem(item)}>Equip this item</button>
+          }
         </div>
       );
     }
@@ -31,6 +32,7 @@ InventoryItemDetails.propTypes = {
   item: ItemPropTypesShape,
   vendors: PropTypes.arrayOf(VendorPropTypesShape).isRequired,
   onEquipItem: PropTypes.func.isRequired,
+  showControls: PropTypes.bool.isRequired,
 };
 
 InventoryItemDetails.defaultProps = {

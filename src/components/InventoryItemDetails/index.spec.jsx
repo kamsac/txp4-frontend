@@ -10,6 +10,7 @@ describe('<InventoryItemDetails>', () => {
       item={ITEMS[0]}
       vendors={VENDORS}
       onEquipItem={jest.fn()}
+      showControls
     />);
     expect(component).toMatchSnapshot();
   });
@@ -19,6 +20,7 @@ describe('<InventoryItemDetails>', () => {
       item={null}
       vendors={VENDORS}
       onEquipItem={jest.fn()}
+      showControls
     />);
     expect(component).toMatchSnapshot();
   });
@@ -29,9 +31,20 @@ describe('<InventoryItemDetails>', () => {
       item={ITEMS[0]}
       vendors={VENDORS}
       onEquipItem={onEquipItem}
+      showControls
     />);
     const equipItemButton = component.find('button').filterWhere(wrapper => wrapper.text() === 'Equip this item');
     equipItemButton.simulate('click');
     expect(onEquipItem).toHaveBeenCalled();
+  });
+
+  it('should not render equip button when user is not owner', () => {
+    const component = shallow(<InventoryItemDetails
+      item={ITEMS[0]}
+      vendors={VENDORS}
+      onEquipItem={jest.fn()}
+      showControls={false}
+    />);
+    expect(component).toMatchSnapshot();
   });
 });
