@@ -18,7 +18,7 @@ export default class Inventory extends React.Component {
   }
 
   componentDidMount() {
-    this.props.requestItems();
+    this.props.loadPlayerInventory();
     this.props.requestVendors();
   }
 
@@ -29,6 +29,10 @@ export default class Inventory extends React.Component {
   }
 
   render() {
+    if (!this.props.items || !this.props.vendors) {
+      return <div />;
+    }
+
     const items = this.props.items
       .filter(item => !item.isEquipped)
       .map(item => (
@@ -62,10 +66,15 @@ export default class Inventory extends React.Component {
 }
 
 Inventory.propTypes = {
-  items: PropTypes.arrayOf(ItemPropTypesShape).isRequired,
-  vendors: PropTypes.arrayOf(VendorPropTypesShape).isRequired,
-  requestItems: PropTypes.func.isRequired,
+  items: PropTypes.arrayOf(ItemPropTypesShape),
+  vendors: PropTypes.arrayOf(VendorPropTypesShape),
+  loadPlayerInventory: PropTypes.func.isRequired,
   requestVendors: PropTypes.func.isRequired,
   equipRegions: PropTypes.arrayOf(PropTypes.string).isRequired,
   onEquipItem: PropTypes.func.isRequired,
+};
+
+Inventory.defaultProps = {
+  items: null,
+  vendors: null,
 };

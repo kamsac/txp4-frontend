@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Navbar from './index';
 import dotenvConfiguration from '../../dotenv-configuration';
-import { PLAYER } from '../../resources/player/mock';
+import { PLAYER } from '../../resources/players/mock';
 
 describe('<Navbar>', () => {
   it('should render', () => {

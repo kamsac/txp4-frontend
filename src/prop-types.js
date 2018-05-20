@@ -14,6 +14,10 @@ export const ItemPropTypesShape = PropTypes.shape({
   modifiers: PropTypes.arrayOf(ItemModifierPropTypesShape),
 });
 
+export const InventoryPropTypesShape = PropTypes.shape({
+  items: PropTypes.arrayOf(ItemPropTypesShape),
+});
+
 export const PlayerPropTypesShape = PropTypes.shape({
   login: PropTypes.string.isRequired,
   nick: PropTypes.string.isRequired,

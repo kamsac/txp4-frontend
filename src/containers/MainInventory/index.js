@@ -1,17 +1,18 @@
 import { connect } from 'react-redux';
-import { equipItem, requestItems } from '../../actions/inventory';
+import { equipItem, loadPlayerInventory } from '../../actions/inventory';
 import { requestVendors } from '../../actions/vendors';
 import Inventory from '../../components/Inventory/index';
+import { getPlayerInventoryItems } from '../../reducers/inventory';
 
-const mapStateToProps = state => ({
-  items: state.player.inventory.items,
+const mapStateToProps = (state, ownProps) => ({
+  items: getPlayerInventoryItems(state, ownProps.ownerLogin),
   equipRegions: ['tire', 'engine', 'transmission'],
   vendors: state.vendors,
 });
 
-const mapDispatchToProps = dispatch => ({
-  requestItems: () => dispatch(requestItems()),
-  onEquipItem: item => dispatch(equipItem(item)),
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  loadPlayerInventory: () => dispatch(loadPlayerInventory(ownProps.ownerLogin)),
+  onEquipItem: item => dispatch(equipItem(ownProps.ownerLogin, item)),
   requestVendors: () => dispatch(requestVendors()),
 });
 

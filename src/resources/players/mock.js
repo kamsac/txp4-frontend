@@ -383,11 +383,25 @@ export const PLAYER = {
   },
 };
 
+const INVENTORY = {
+  items: ITEMS,
+};
+
 const PlayerResourceMock = {
-  getPlayer() {
+  getPlayer(playerLogin) {
     return new Promise((resolve) => {
+      const player = {
+        login: playerLogin,
+        nick: `$s${playerLogin}`,
+        inventory: {
+          items: ITEMS,
+        },
+      };
+
       const response = {
-        data: PLAYER,
+        data: {
+          player,
+        },
       };
       setTimeout(() => resolve(response), 100);
     });
@@ -397,7 +411,7 @@ const PlayerResourceMock = {
     return new Promise((resolve) => {
       const response = {
         data: {
-          items: ITEMS,
+          inventory: INVENTORY,
         },
       };
       setTimeout(() => resolve(response), 100);
@@ -408,7 +422,7 @@ const PlayerResourceMock = {
     return new Promise((resolve) => {
       const response = {
         data: {
-          items: ITEMS,
+          inventory: INVENTORY,
         },
       };
       setTimeout(() => resolve(response), 100);
@@ -418,7 +432,9 @@ const PlayerResourceMock = {
   unequipItem() {
     return new Promise((resolve) => {
       const response = {
-        data: ITEMS,
+        data: {
+          inventory: INVENTORY,
+        },
       };
       setTimeout(() => resolve(response), 100);
     });

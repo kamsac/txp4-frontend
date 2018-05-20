@@ -1,5 +1,5 @@
 import trackmaniaStyleParser from './trackmania-style-parser';
-import { PLAYER } from './resources/player/mock';
+import { PLAYER } from './resources/players/mock';
 
 describe('trackmaniaStyleParser', () => {
   it('should parse', () => {

@@ -1,37 +1,103 @@
 import dotenvConfiguration from '../dotenv-configuration';
-import PlayerResourceMock from '../resources/player/mock';
-import PlayerResource from '../resources/player';
+import PlayerResourceMock from '../resources/players/mock';
+import PlayerResource from '../resources/players';
 
-export const RECEIVE_INVENTORY = 'inventory:receiveItems';
-export function receiveItems(items) {
+export const INVENTORY_REQUEST = 'INVENTORY_REQUEST';
+export const INVENTORY_SUCCESS = 'INVENTORY_SUCCESS';
+export const INVENTORY_FAILURE = 'INVENTORY_FAILURE';
+export const EQUIP_REQUEST = 'EQUIP_REQUEST';
+export const EQUIP_SUCCESS = 'EQUIP_SUCCESS';
+export const EQUIP_FAILURE = 'EQUIP_FAILURE';
+
+export function requestInventory(playerLogin) {
   return {
-    type: RECEIVE_INVENTORY,
-    payload: { items },
+    type: INVENTORY_REQUEST,
+    payload: {
+      isFetching: true,
+      playerLogin,
+    },
   };
 }
 
-export const EQUIP_ITEM = 'inventory:equipItem';
-export function equipItem(item) {
+export function receiveInventory(playerLogin, inventory) {
   return {
-    type: EQUIP_ITEM,
-    payload: { item },
+    type: INVENTORY_SUCCESS,
+    payload: {
+      isFetching: false,
+      playerLogin,
+      inventory,
+    },
   };
 }
 
-function fetchItems() {
-  const resource = dotenvConfiguration.API_URL ? PlayerResource : PlayerResourceMock;
+export function inventoryError(playerLogin) {
+  return {
+    type: INVENTORY_FAILURE,
+    payload: {
+      isFetching: false,
+      playerLogin,
+    },
+  };
+}
 
+export function requestEquipItem(playerLogin, item) {
+  return {
+    type: EQUIP_REQUEST,
+    payload: {
+      isFetching: true,
+      playerLogin,
+      item,
+    },
+  };
+}
+
+export function receiveEquipItem(playerLogin, inventory) {
+  return {
+    type: EQUIP_SUCCESS,
+    payload: {
+      isFetching: false,
+      playerLogin,
+      inventory,
+    },
+  };
+}
+
+export function equipItemError(playerLogin) {
+  return {
+    type: EQUIP_FAILURE,
+    payload: {
+      isFetching: false,
+      playerLogin,
+    },
+  };
+}
+
+export function loadPlayerInventory(playerLogin) {
   return (dispatch) => {
-    resource.getInventory()
+    dispatch(requestInventory(playerLogin));
+
+    const resource = dotenvConfiguration.API_URL ? PlayerResource : PlayerResourceMock;
+    resource.getInventory(playerLogin)
       .then((response) => {
-        dispatch(receiveItems(response.data.items));
+        dispatch(receiveInventory(playerLogin, response.data.inventory));
+      })
+      .catch(() => {
+        dispatch(inventoryError(playerLogin));
       });
   };
 }
 
-export const REQUEST_INVENTORY = 'inventory:requestInventory';
-export function requestItems() {
+export function equipItem(playerLogin, item) {
   return (dispatch) => {
-    dispatch(fetchItems());
+    dispatch(requestEquipItem(playerLogin, item));
+
+    const resource = dotenvConfiguration.API_URL ? PlayerResource : PlayerResourceMock;
+    resource.equipItem(playerLogin, item.id)
+      .then((response) => {
+        dispatch(receiveEquipItem(playerLogin, response.data.inventory));
+      })
+      .catch(() => {
+        dispatch(equipItemError(playerLogin));
+      });
   };
 }

@@ -3,6 +3,7 @@
 exports[`receivePlayer 1`] = `
 Object {
   "payload": Object {
+    "isFetching": false,
     "player": Object {
       "inventory": Object {
         "items": Array [],
@@ -11,6 +12,6 @@ Object {
       "nick": "someNick",
     },
   },
-  "type": "player:receivePlayer",
+  "type": "PLAYER_SUCCESS",
 }
 `;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import EquippedItems from './index';
-import { ITEMS } from '../../resources/player/mock';
+import { ITEMS } from '../../resources/players/mock';
 import { VENDORS } from '../../resources/vendors/mock';
 
 test('<EquippedItems>', () => {

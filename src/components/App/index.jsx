@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Redirect } from 'react-router-dom';
-import InventoryPage from '../InventoryPage/index';
+import InventoryPageContainer from '../../containers/InventoryPageContainer';
 import ScoresPage from '../ScoresPage/index';
 import LoginPage from '../LoginPage';
+import PlayerPageContainer from '../../containers/PlayerPageContainer';
 
 export default class App extends Component {
   render() {
@@ -10,7 +11,7 @@ export default class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Route exact path="/" component={() => <Redirect to="/scores" />} />
-          <Route exact path="/inventory" component={InventoryPage} />
+          <Route exact path="/inventory" component={InventoryPageContainer} />
           <Route exact path="/scores" component={ScoresPage} />
           <Route
             exact
@@ -19,6 +20,16 @@ export default class App extends Component {
               const { magicLinkToken } = props.match.params;
               return (
                 <LoginPage magicLinkToken={magicLinkToken} />
+              );
+            }}
+          />
+          <Route
+            exact
+            path="/player/:playerLogin"
+            component={(props) => {
+              const { playerLogin } = props.match.params;
+              return (
+                <PlayerPageContainer playerLogin={playerLogin} />
               );
             }}
           />

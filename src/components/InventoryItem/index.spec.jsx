@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import InventoryItem from './index';
 import { VENDORS } from '../../resources/vendors/mock';
-import { ITEMS } from '../../resources/player/mock';
+import { ITEMS } from '../../resources/players/mock';
 
 describe('<InventoryItem>', () => {
   test('with item', () => {

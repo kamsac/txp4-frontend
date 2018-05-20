@@ -8,12 +8,9 @@ test('@@INIT', () => {
       jwtDecoded: null,
     },
     scores: [],
-    player: {
-      login: '',
-      nick: '',
-      inventory: {
-        items: [],
-      },
+    players: {
+      isFetching: false,
+      items: {},
     },
     vendors: [],
   });

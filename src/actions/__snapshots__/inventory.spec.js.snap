@@ -1,15 +1,214 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`equipItem 1`] = `
+exports[`equipItemError 1`] = `
 Object {
   "payload": Object {
+    "isFetching": false,
+    "playerLogin": "lymak",
+  },
+  "type": "EQUIP_FAILURE",
+}
+`;
+
+exports[`inventoryError 1`] = `
+Object {
+  "payload": Object {
+    "isFetching": false,
+    "playerLogin": "lymak",
+  },
+  "type": "INVENTORY_FAILURE",
+}
+`;
+
+exports[`receiveEquipItem 1`] = `
+Object {
+  "payload": Object {
+    "inventory": Object {
+      "items": Array [
+        Object {
+          "equipRegion": "tire",
+          "id": "a1a1a1",
+          "isEquipped": true,
+          "modifiers": Array [
+            Object {
+              "name": "maxSpeed",
+              "value": 1,
+            },
+            Object {
+              "name": "acceleration",
+              "value": 1.2,
+            },
+            Object {
+              "name": "steering",
+              "value": 1.1,
+            },
+            Object {
+              "name": "breaking",
+              "value": 1.2,
+            },
+            Object {
+              "name": "grip",
+              "value": 1.5,
+            },
+            Object {
+              "name": "gravity",
+              "value": 1,
+            },
+          ],
+          "name": "Tire",
+          "tier": 3,
+          "vendorId": "aaa",
+        },
+        Object {
+          "equipRegion": "tire",
+          "id": "b2b2b2",
+          "isEquipped": false,
+          "modifiers": Array [
+            Object {
+              "name": "maxSpeed",
+              "value": 0.4,
+            },
+            Object {
+              "name": "acceleration",
+              "value": 1,
+            },
+            Object {
+              "name": "steering",
+              "value": 1.4,
+            },
+            Object {
+              "name": "breaking",
+              "value": 2,
+            },
+            Object {
+              "name": "grip",
+              "value": 3,
+            },
+            Object {
+              "name": "gravity",
+              "value": 1,
+            },
+          ],
+          "name": "Less tired",
+          "tier": 1,
+          "vendorId": "bbb",
+        },
+        Object {
+          "equipRegion": "engine",
+          "id": "c3c3c3",
+          "isEquipped": false,
+          "modifiers": Array [
+            Object {
+              "name": "maxSpeed",
+              "value": 2,
+            },
+            Object {
+              "name": "acceleration",
+              "value": 1.8,
+            },
+            Object {
+              "name": "steering",
+              "value": 1,
+            },
+            Object {
+              "name": "breaking",
+              "value": 1,
+            },
+            Object {
+              "name": "grip",
+              "value": 0.2,
+            },
+            Object {
+              "name": "gravity",
+              "value": 1.5,
+            },
+          ],
+          "name": "Shit engine",
+          "tier": 2,
+          "vendorId": "ccc",
+        },
+      ],
+    },
+    "isFetching": false,
+    "playerLogin": "lymak",
+  },
+  "type": "EQUIP_SUCCESS",
+}
+`;
+
+exports[`receiveInventory 1`] = `
+Object {
+  "payload": Object {
+    "inventory": Object {
+      "items": Array [
+        Object {
+          "equipRegion": "tire",
+          "id": "a1a1a1",
+          "isEquipped": true,
+          "modifiers": Array [
+            Object {
+              "name": "acceleration",
+              "value": 1.2,
+            },
+          ],
+          "name": "Tire",
+          "tier": 3,
+          "vendorId": "aaa",
+        },
+        Object {
+          "equipRegion": "tire",
+          "id": "b2b2b2",
+          "isEquipped": false,
+          "modifiers": Array [
+            Object {
+              "name": "maxSpeed",
+              "value": 0.4,
+            },
+          ],
+          "name": "Less tired",
+          "tier": 1,
+          "vendorId": "bbb",
+        },
+      ],
+    },
+    "isFetching": false,
+    "playerLogin": "lymak",
+  },
+  "type": "INVENTORY_SUCCESS",
+}
+`;
+
+exports[`requestEquipItem 1`] = `
+Object {
+  "payload": Object {
+    "isFetching": true,
     "item": Object {
       "equipRegion": "tire",
-      "id": "e5e5e5",
-      "isEquipped": false,
+      "id": "a1a1a1",
+      "isEquipped": true,
       "modifiers": Array [
         Object {
           "name": "maxSpeed",
+          "value": 1,
+        },
+        Object {
+          "name": "acceleration",
+          "value": 1.2,
+        },
+        Object {
+          "name": "steering",
+          "value": 1.1,
+        },
+        Object {
+          "name": "breaking",
+          "value": 1.2,
+        },
+        Object {
+          "name": "grip",
+          "value": 1.5,
+        },
+        Object {
+          "name": "gravity",
           "value": 1,
         },
       ],
@@ -17,45 +216,18 @@ Object {
       "tier": 3,
       "vendorId": "aaa",
     },
+    "playerLogin": "lymak",
   },
-  "type": "inventory:equipItem",
+  "type": "EQUIP_REQUEST",
 }
 `;
 
-exports[`receiveItems 1`] = `
+exports[`requestInventory 1`] = `
 Object {
   "payload": Object {
-    "items": Array [
-      Object {
-        "equipRegion": "tire",
-        "id": "a1a1a1",
-        "isEquipped": true,
-        "modifiers": Array [
-          Object {
-            "name": "acceleration",
-            "value": 1.2,
-          },
-        ],
-        "name": "Tire",
-        "tier": 3,
-        "vendorId": "aaa",
-      },
-      Object {
-        "equipRegion": "tire",
-        "id": "b2b2b2",
-        "isEquipped": false,
-        "modifiers": Array [
-          Object {
-            "name": "maxSpeed",
-            "value": 0.4,
-          },
-        ],
-        "name": "Less tired",
-        "tier": 1,
-        "vendorId": "bbb",
-      },
-    ],
+    "isFetching": true,
+    "playerLogin": "lymak",
   },
-  "type": "inventory:receiveItems",
+  "type": "INVENTORY_REQUEST",
 }
 `;

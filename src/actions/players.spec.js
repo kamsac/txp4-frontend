@@ -1,4 +1,4 @@
-import { receivePlayer } from './player';
+import { receivePlayer } from './players';
 
 test('receivePlayer', () => {
   const somePlayer = {
