@@ -1,3 +1,5 @@
+import getRandomApiMockResponseTime from '../get-random-api-mock-response-time';
+
 export const ITEMS = [
   {
     id: 'a1a1a1',
@@ -403,7 +405,7 @@ const PlayerResourceMock = {
           player,
         },
       };
-      setTimeout(() => resolve(response), 100);
+      setTimeout(() => resolve(response), getRandomApiMockResponseTime());
     });
   },
 
@@ -414,7 +416,7 @@ const PlayerResourceMock = {
           inventory: INVENTORY,
         },
       };
-      setTimeout(() => resolve(response), 100);
+      setTimeout(() => resolve(response), getRandomApiMockResponseTime());
     });
   },
 
@@ -425,7 +427,7 @@ const PlayerResourceMock = {
           inventory: INVENTORY,
         },
       };
-      setTimeout(() => resolve(response), 100);
+      setTimeout(() => resolve(response), getRandomApiMockResponseTime());
     });
   },
 
@@ -436,7 +438,7 @@ const PlayerResourceMock = {
           inventory: INVENTORY,
         },
       };
-      setTimeout(() => resolve(response), 100);
+      setTimeout(() => resolve(response), getRandomApiMockResponseTime());
     });
   },
 };

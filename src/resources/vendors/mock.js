@@ -1,3 +1,5 @@
+import getRandomApiMockResponseTime from '../get-random-api-mock-response-time';
+
 export const VENDORS = [
   {
     id: 'aaa',
@@ -27,7 +29,7 @@ const VendorsResourceMock = {
       const response = {
         data: VENDORS,
       };
-      setTimeout(() => resolve(response), 100);
+      setTimeout(() => resolve(response), getRandomApiMockResponseTime());
     });
   },
 };

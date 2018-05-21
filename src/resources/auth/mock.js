@@ -1,3 +1,5 @@
+import getRandomApiMockResponseTime from '../get-random-api-mock-response-time';
+
 export const ACCESS_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwiaWF0IjoxNTE2MjM5MDIyLCJsb2dpbiI6Imx5bWFrIiwibmljayI6IiRzJG8kYTYwbCRjODJ5JGZhM20kYzgyYSRhNjBrIn0.aaKzXEZP2tovhBAqPJYBdmbLzKjfdBsuX3FaB58JZvE';
 
 const AuthResourceMock = {
@@ -8,7 +10,7 @@ const AuthResourceMock = {
           token: ACCESS_TOKEN,
         },
       };
-      setTimeout(() => resolve(response), 1000);
+      setTimeout(() => resolve(response), getRandomApiMockResponseTime());
     });
   },
 };

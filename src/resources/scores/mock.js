@@ -1,3 +1,5 @@
+import getRandomApiMockResponseTime from '../get-random-api-mock-response-time';
+
 export const SCORES = [
   {
     player: {
@@ -77,7 +79,7 @@ const ScoresResourceMock = {
       const response = {
         data: SCORES,
       };
-      setTimeout(() => resolve(response), 100);
+      setTimeout(() => resolve(response), getRandomApiMockResponseTime());
     });
   },
 };
