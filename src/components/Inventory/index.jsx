@@ -19,7 +19,7 @@ export default class Inventory extends React.Component {
 
   componentDidMount() {
     this.props.loadPlayerInventory();
-    this.props.requestVendors();
+    this.props.loadVendors();
   }
 
   selectItem(item) {
@@ -70,7 +70,7 @@ Inventory.propTypes = {
   items: PropTypes.arrayOf(ItemPropTypesShape),
   vendors: PropTypes.arrayOf(VendorPropTypesShape),
   loadPlayerInventory: PropTypes.func.isRequired,
-  requestVendors: PropTypes.func.isRequired,
+  loadVendors: PropTypes.func.isRequired,
   equipRegions: PropTypes.arrayOf(PropTypes.string).isRequired,
   onEquipItem: PropTypes.func.isRequired,
   isUserOwner: PropTypes.bool.isRequired,

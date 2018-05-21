@@ -1,42 +1,61 @@
 import vendorsReducer from './vendors';
-import { RECEIVE_VENDORS } from '../actions/vendors';
+import {
+  VENDORS_REQUEST,
+  VENDORS_SUCCESS,
+  VENDORS_FAILURE,
+  requestVendors,
+  receiveVendors,
+  vendorsError,
+} from '../actions/vendors';
+import { VENDORS } from '../resources/vendors/mock';
 
-test(`${RECEIVE_VENDORS}`, () => {
-  const vendors = [
-    {
-      id: 'aaa',
-      name: 'Super',
-      color: '#8f0',
-    },
-    {
-      id: 'bbb',
-      name: 'Safe',
-      color: '#f80',
-    },
-    {
-      id: 'ccc',
-      name: 'Heavy',
-      color: '#800',
-    },
-    {
-      id: 'ddd',
-      name: 'Light',
-      color: '#08f',
-    },
-  ];
-
-  const previousState = [];
-
-  const action = {
-    type: RECEIVE_VENDORS,
-    payload: {
-      vendors,
-    },
+test(`${VENDORS_REQUEST}`, () => {
+  const vendors = VENDORS;
+  const previousState = {
+    isFetching: false,
+    items: vendors,
+  };
+  const expectedState = {
+    isFetching: true,
+    items: vendors,
   };
 
+  const action = requestVendors();
   const state = vendorsReducer(previousState, action);
 
-  const expectedState = vendors;
+  expect(state).toEqual(expectedState);
+});
+
+test(`${VENDORS_SUCCESS}`, () => {
+  const vendors = VENDORS;
+  const previousState = {
+    isFetching: true,
+    items: [],
+  };
+  const expectedState = {
+    isFetching: false,
+    items: vendors,
+  };
+
+  const action = receiveVendors(vendors);
+  const state = vendorsReducer(previousState, action);
+
+  expect(state).toEqual(expectedState);
+});
+
+test(`${VENDORS_FAILURE}`, () => {
+  const vendors = VENDORS;
+  const previousState = {
+    isFetching: true,
+    items: vendors,
+  };
+  const expectedState = {
+    isFetching: false,
+    items: vendors,
+  };
+
+  const action = vendorsError();
+  const state = vendorsReducer(previousState, action);
 
   expect(state).toEqual(expectedState);
 });

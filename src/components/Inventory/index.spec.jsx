@@ -9,7 +9,7 @@ test('<Inventory>', () => {
     items={ITEMS}
     vendors={VENDORS}
     loadPlayerInventory={jest.fn()}
-    requestVendors={jest.fn()}
+    loadVendors={jest.fn()}
     equipRegions={['tire', 'engine', 'transmission']}
     onEquipItem={jest.fn()}
     isUserOwner

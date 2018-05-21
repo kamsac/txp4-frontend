@@ -15,6 +15,9 @@ test('@@INIT', () => {
       isFetching: false,
       items: {},
     },
-    vendors: [],
+    vendors: {
+      isFetching: false,
+      items: [],
+    },
   });
 });

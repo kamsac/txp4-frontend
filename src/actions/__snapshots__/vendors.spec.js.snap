@@ -3,6 +3,7 @@
 exports[`receiveVendors 1`] = `
 Object {
   "payload": Object {
+    "isFetching": false,
     "vendors": Array [
       Object {
         "color": "#8f0",
@@ -26,6 +27,24 @@ Object {
       },
     ],
   },
-  "type": "vendors:fetchVendorsSuccess",
+  "type": "VENDORS_SUCCESS",
+}
+`;
+
+exports[`requestVendors 1`] = `
+Object {
+  "payload": Object {
+    "isFetching": true,
+  },
+  "type": "VENDORS_REQUEST",
+}
+`;
+
+exports[`vendorsError 1`] = `
+Object {
+  "payload": Object {
+    "isFetching": false,
+  },
+  "type": "VENDORS_FAILURE",
 }
 `;
