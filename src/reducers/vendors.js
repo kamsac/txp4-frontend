@@ -31,6 +31,10 @@ export default function vendorsReducer(state = initialState, action) {
   }
 }
 
+export function getIsVendorsFetching(state) {
+  return state.vendors.isFetching;
+}
+
 export function getVendors(state) {
   return state.vendors.items;
 }
