@@ -11,11 +11,21 @@ const PlayerResource = {
   },
 
   equipItem(playerLogin, itemId) {
-    return axios.get(`${dotenvConfiguration.API_URL}/players/${playerLogin}/inventory/${itemId}/equip`);
+    const accessToken = localStorage.getItem('accessToken');
+    return axios.get(`${dotenvConfiguration.API_URL}/players/${playerLogin}/inventory/${itemId}/equip`, {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    });
   },
 
   unequipItem(playerLogin, itemId) {
-    return axios.get(`${dotenvConfiguration.API_URL}/players/${playerLogin}/inventory/${itemId}/unequip`);
+    const accessToken = localStorage.getItem('accessToken');
+    return axios.get(`${dotenvConfiguration.API_URL}/players/${playerLogin}/inventory/${itemId}/unequip`, {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    });
   },
 };
 

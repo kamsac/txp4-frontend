@@ -11,6 +11,7 @@ import {
 } from './inventory';
 import { ITEMS } from '../resources/players/mock';
 import dotenvConfiguration from '../dotenv-configuration';
+import { ACCESS_TOKEN } from '../resources/auth/mock';
 
 test('requestInventory', () => {
   const someLogin = 'lymak';
@@ -428,6 +429,37 @@ describe('equipItem', () => {
           moxios.uninstall();
           done();
         });
+    });
+  });
+
+  test('should be authorized', () => {
+    moxios.install();
+    const someLogin = 'lymak';
+    const itemToBeEquipped = {
+      id: 'b2b2b2',
+      name: 'Less tired',
+      vendorId: 'bbb',
+      equipRegion: 'tire',
+      tier: 1,
+      isEquipped: false,
+      modifiers: [
+        {
+          name: 'maxSpeed',
+          value: 0.4,
+        },
+        {
+          name: 'acceleration',
+          value: 1,
+        },
+      ],
+    };
+    const dispatchMock = jest.fn();
+    localStorage.__STORE__['accessToken'] = ACCESS_TOKEN; // eslint-disable-line
+    equipItem(someLogin, itemToBeEquipped)(dispatchMock);
+    moxios.wait(() => {
+      const request = moxios.requests.mostRecent();
+      expect(request.headers.Authorization).toEqual(`Bearer ${ACCESS_TOKEN}`);
+      moxios.uninstall();
     });
   });
 });
