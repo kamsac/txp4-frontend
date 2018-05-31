@@ -10,14 +10,12 @@
   grid-template-rows: 100px 1fr;
 }
 
-@import '../../variables';
-
 .EquipRegionPlaceholder__Item {
-  background-color: #ccc;
+  background-color: $gray-light;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  border: $border-width solid #000;
+  border: $border-width solid $black;
   border-radius: $border-radius;
 }
 
@@ -30,4 +28,3 @@
 .EquipRegionPlaceholder__Title {
   font-size: $font-size-header;
 }
-

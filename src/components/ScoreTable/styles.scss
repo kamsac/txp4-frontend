@@ -6,7 +6,7 @@ $score-table-header-padding-x: $score-table-cell-padding-x;
 $score-table-header-padding-y: 1rem;
 
 .ScoreTable {
-  border: $border-width solid #000;
+  border: $border-width solid $black;
   border-collapse: collapse;
   grid-area: ScoreTable;
   width: 100%;
@@ -19,7 +19,7 @@ $score-table-header-padding-y: 1rem;
 
 .ScoreTable-Row {
   &:hover {
-    background-color: transparentize($primary-color, 0.8);
+    background-color: $data-hover-color;
   }
 }
 
@@ -42,7 +42,7 @@ $score-table-header-padding-y: 1rem;
 }
 
 .ScoreTable-Cell-Anchor {
-  color: unset;
+  color: $unset;
   text-decoration: none;
   display: block;
   padding: $score-table-cell-padding-y $score-table-cell-padding-x;

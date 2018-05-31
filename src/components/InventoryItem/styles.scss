@@ -1,11 +1,11 @@
 @import '../../variables';
 
 .InventoryItem {
-  background-color: #ccc;
+  background-color: $gray-light;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  border: $border-width solid #000;
+  border: $border-width solid $black;
   border-radius: $border-radius;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .InventoryItem--empty {
-  background-color: #888;
+  background-color: $gray;
 }
 
 .InventoryItem--selected {

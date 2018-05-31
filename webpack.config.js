@@ -1,11 +1,19 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+
+const isProduction = process.env.NODE_ENV === 'production';
 
 const dotenvPlugin = new Dotenv();
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
   template: 'src/index.html',
+});
+const extractTextPlugin = new ExtractTextPlugin('styles-[contenthash:6].css');
+const styleLintPlugin = new StyleLintPlugin({
+  emitErrors: isProduction, // errors block HMR!
 });
 
 const config = {
@@ -23,6 +31,15 @@ const config = {
   module: {
     rules: [
       {
+        enforce: 'pre',
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
+        options: {
+          emitWarning: !isProduction, // errors block HMR!
+        },
+      },
+      {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
@@ -36,21 +53,49 @@ const config = {
           {
             loader: 'css-loader',
           },
+          {
+            loader: 'postcss-loader',
+          },
         ],
       },
       {
         test: /\.scss$/,
-        use: [
-          {
-            loader: 'style-loader',
-          },
-          {
-            loader: 'css-loader',
-          },
-          {
-            loader: 'sass-loader',
-          },
-        ],
+        use: isProduction ?
+          ExtractTextPlugin.extract({
+            fallback: 'style-loader',
+            use: [
+              {
+                loader: 'css-loader',
+              },
+              {
+                loader: 'postcss-loader',
+                options: {
+                  importLoaders: 1,
+                },
+              },
+              {
+                loader: 'sass-loader',
+              },
+            ],
+          })
+          :
+          [
+            {
+              loader: 'style-loader',
+            },
+            {
+              loader: 'css-loader',
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                importLoaders: 1,
+              },
+            },
+            {
+              loader: 'sass-loader',
+            },
+          ],
       },
       {
         test: /\.png|jpg|gif$/,
@@ -70,6 +115,8 @@ const config = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     htmlWebpackPlugin,
+    extractTextPlugin,
+    styleLintPlugin,
   ],
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
@@ -84,12 +131,14 @@ const config = {
   },
 };
 
-if (process.env.NODE_ENV === 'production') {
+if (isProduction) {
   config.entry = './src/entry.jsx';
   config.devtool = false;
   config.plugins = [
     dotenvPlugin,
     htmlWebpackPlugin,
+    extractTextPlugin,
+    styleLintPlugin,
   ];
 }
 
