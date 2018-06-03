@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import dotenvConfiguration from '../../dotenv-configuration';
 import './styles.scss';
@@ -31,9 +31,13 @@ export default class Navbar extends React.Component {
   render() {
     const navigationItems = this.navigationItems.map(navigationItem => (
       <li key={navigationItem.label} className="NavigationItem">
-        <Link to={navigationItem.href} className="NavigationItem__anchor">
+        <NavLink
+          to={navigationItem.href}
+          className="NavigationItem__anchor"
+          activeClassName="NavigationItem__anchor--active"
+        >
           {navigationItem.label}
-        </Link>
+        </NavLink>
       </li>
     ));
 
@@ -59,16 +63,17 @@ export default class Navbar extends React.Component {
                   </div>
                 </li>
                 <li className="NavigationItem">
-                  <Link
+                  <NavLink
                     to={`/player/${this.props.userLogin}`}
                     className="NavigationItem__anchor"
+                    activeClassName="NavigationItem__anchor--active"
                   >
                     <span
                       dangerouslySetInnerHTML={{
                       __html: trackmaniaStyleParser(this.props.userNick),
                       }}
                     />
-                  </Link>
+                  </NavLink>
                 </li>
               </ul>
             </div>

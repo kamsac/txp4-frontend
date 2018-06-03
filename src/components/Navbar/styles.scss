@@ -55,6 +55,19 @@
   }
 }
 
+.NavigationItem__anchor--active {
+  $limit: 90%;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent,
+      transparent $limit,
+      $primary-color $limit,
+      $primary-color 100%
+    );
+}
+
 .LoggedUser {
   align-items: center;
   display: grid;

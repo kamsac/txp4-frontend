@@ -19,25 +19,27 @@ exports[`<Navbar> should add "login mock" button when no api url is defined 1`] 
         className="NavigationItem"
         key="Inventory"
       >
-        <Link
+        <NavLink
+          activeClassName="NavigationItem__anchor--active"
+          ariaCurrent="true"
           className="NavigationItem__anchor"
-          replace={false}
           to="/inventory"
         >
           Inventory
-        </Link>
+        </NavLink>
       </li>
       <li
         className="NavigationItem"
         key="Scores"
       >
-        <Link
+        <NavLink
+          activeClassName="NavigationItem__anchor--active"
+          ariaCurrent="true"
           className="NavigationItem__anchor"
-          replace={false}
           to="/scores"
         >
           Scores
-        </Link>
+        </NavLink>
       </li>
     </ul>
   </div>
@@ -63,25 +65,27 @@ exports[`<Navbar> should render 1`] = `
         className="NavigationItem"
         key="Inventory"
       >
-        <Link
+        <NavLink
+          activeClassName="NavigationItem__anchor--active"
+          ariaCurrent="true"
           className="NavigationItem__anchor"
-          replace={false}
           to="/inventory"
         >
           Inventory
-        </Link>
+        </NavLink>
       </li>
       <li
         className="NavigationItem"
         key="Scores"
       >
-        <Link
+        <NavLink
+          activeClassName="NavigationItem__anchor--active"
+          ariaCurrent="true"
           className="NavigationItem__anchor"
-          replace={false}
           to="/scores"
         >
           Scores
-        </Link>
+        </NavLink>
       </li>
     </ul>
   </div>
