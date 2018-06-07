@@ -1,0 +1,36 @@
+@import '../../variables';
+
+$button-color: $gray-light;
+$button-shadow-color: darken($button-color, 25%);
+$button-shadow-height: 0.4rem;
+$button-padding-x: 1rem;
+$button-padding-y: 1rem;
+
+$button-hover-lighten-percent: 3%;
+$button-active-lighten-percent: 6%;
+$button-hover-color: lighten($button-color, $button-hover-lighten-percent);
+$button-active-color: lighten($button-color, $button-active-lighten-percent);
+
+$button-animation-time: 0.2s;
+
+.Button {
+  background-color: $button-color;
+  box-shadow: 0 (-$button-shadow-height) 0 $button-shadow-color inset;
+  color: $black;
+  padding: $button-padding-y $button-padding-x $button-padding-y+$button-shadow-height $button-padding-x;
+  border: none;
+  cursor: pointer;
+  border-radius: $border-radius $border-radius 0 0;
+  transition:
+    background-color $button-animation-time,
+    box-shadow $button-animation-time;
+
+  &:hover {
+    background-color: $button-hover-color;
+  }
+
+  &:active {
+    background-color: $button-active-color;
+    transition: none;
+  }
+}

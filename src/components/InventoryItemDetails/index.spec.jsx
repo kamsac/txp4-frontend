@@ -33,7 +33,7 @@ describe('<InventoryItemDetails>', () => {
       onEquipItem={onEquipItem}
       showControls
     />);
-    const equipItemButton = component.find('button').filterWhere(wrapper => wrapper.text() === 'Equip this item');
+    const equipItemButton = component.find('Button').filterWhere(wrapper => wrapper.dive().text() === 'Equip this item');
     equipItemButton.simulate('click');
     expect(onEquipItem).toHaveBeenCalled();
   });

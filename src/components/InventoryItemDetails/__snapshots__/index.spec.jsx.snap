@@ -221,10 +221,11 @@ exports[`<InventoryItemDetails> with selected item 1`] = `
       }
     }
   />
-  <button
+  <Button
     onClick={[Function]}
+    type="primary"
   >
     Equip this item
-  </button>
+  </Button>
 </div>
 `;
