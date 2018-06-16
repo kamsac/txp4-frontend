@@ -12,7 +12,7 @@ export default class EquipRegionPlaceholder extends React.Component {
         <div className={itemClassName} />
         <div className="EquipRegionPlaceholder__Details">
           <h1 className="EquipRegionPlaceholder__Title">{this.props.equipRegion}</h1>
-          <p>No custom {this.props.equipRegion} is equipped.</p>
+          <p className="EquipRegionPlaceholder__Description">No custom {this.props.equipRegion} is equipped.</p>
         </div>
       </div>
     );

@@ -1,8 +1,8 @@
-$positive-color: #080;
-$negative-color: #f00;
+@import '../../variables';
 
 .InventoryItemModifiers {
   padding: 0;
+  margin: 0;
 }
 
 .InventoryItemModifiers-modifier {

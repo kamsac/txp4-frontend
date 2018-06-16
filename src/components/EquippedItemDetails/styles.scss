@@ -1,7 +1,11 @@
 @import '../../variables';
 
 .EquippedItemDetails {
+  display: grid;
+  grid-gap: $grid-gap-small;
+  grid-template-rows: auto 1fr;
   border: $border-width solid $black;
   border-radius: $border-radius;
   grid-area: EquippedItemDetails;
+  padding: $item-details-padding-y $item-details-padding-x;
 }

@@ -15,7 +15,9 @@ exports[`<EquipRegionPlaceholder> 1`] = `
     >
       tire
     </h1>
-    <p>
+    <p
+      className="EquipRegionPlaceholder__Description"
+    >
       No custom 
       tire
        is equipped.
